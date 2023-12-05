@@ -9,115 +9,65 @@
     </div>
     <div class="espaco-login">
         <h1 class="Text1">Faça seu cadastro</h1>
-        <h1 class="Text2">Tipo de cadastro:</h1>
-        <label>
-            <input class="button-radio1" type="radio" name="tipo-cadastro" value="pessoa-fisica"
-                (click)="mostrarComponentes('pessoa-fisica')"> Artista
-        </label>
-        <label>
-            <input class="button-radio2" type="radio" name="tipo-cadastro" value="pessoa-juridica"
-                (click)="mostrarComponentes('pessoa-juridica')"> Contratante
-        </label>
-        <div id="componentes-pessoas-fisica" style="display: none;">
+        <div id="componentes-pessoas-fisica" >
             <form [formGroup]="cadastroForm" class="input-table">
                 <div class="form-group">
-                    <label class="escolha-opcao" style="color: rgb(0, 0, 0);">Selecione sua função:&nbsp;</label>
-                    <select id="escolha-opcao" formControlName="artista">
-                        <option value="opcao1">Cantor</option>
-                        <option value="opcao2">Músico</option>
-                        <option value="opcao3">Dançarino</option>
-                        <!-- Adicione mais opções, se necessário -->
-                    </select>
+                    <ng-template [ngIf]="cadastroForm.get('nome')?.errors?.['required'] && cadastroForm.get('nome')?.touched" [ngIfElse]="nome">
+                        <label class="text-danger">Nome*</label>
+                    </ng-template>
+                    <ng-template #nome>Nome*</ng-template>
+                    <input type="text" class="form-control" formControlName="nome" minlength="5" maxlength="37"/>
+                    
                 </div>
 
                 <div class="form-group">
-                    <label>Nome</label>
-                    <input type="text" class="form-control" formControlName="nome" value="{{ '' }}" />
+                    <ng-template [ngIf]="cadastroForm.get('email')?.errors?.['required'] && cadastroForm.get('email')?.touched" [ngIfElse]="email">
+                        <label class="text-danger">Email*</label>
+                    </ng-template>
+                    <ng-template #email>Email*</ng-template>
+                    <input type="email" class="form-control" maxlength="40" minlength="3" formControlName="email" pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/"/>
+                    
                 </div>
 
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" class="form-control" maxlength="40" minlength="3" formControlName="email" />
+                    <ng-template [ngIf]="cadastroForm.get('cpf')?.errors?.['required'] && cadastroForm.get('cpf')?.touched" [ngIfElse]="cpf">
+                        <label class="text-danger">CPF*</label>
+                    </ng-template>
+                    <ng-template #cpf>CPF*</ng-template>
+                    <input type="text" class="form-control" formControlName="cpf" />
                     <span class="mensagem-erro" *ngIf="errorMessage">{{ errorMessage }}</span>
                 </div>
 
                 <div class="form-group">
-                    <label>CPF</label>
-                    <input type="text" class="form-control" formControlName="cpf" />
-                    <span *ngIf="cadastroForm.get('cpf')?.invalid && cadastroForm.get('cpf')?.touched" class="mensagem-erro">
-                        CPF inválido
-                    </span>
-                </div>
 
-                <div class="form-group">
-                    <label>Celular</label>
+                    <ng-template [ngIf]="errorMessageT != null" [ngIfElse]="celular">
+
+                    <label class="text-danger">Celular</label>
+
+                    </ng-template>
+
+                    <ng-template #celular><label>Celular</label></ng-template>
+
                     <input type="text" class="form-control" formControlName="tel" />
+                    <span class="mensagem-erro">{{errorMessageT}}</span>
                 </div>
 
                 <div class="form-group">
                     <label>Senha</label>
-                    <input type="password" class="form-control" formControlName="senha" #senhaInput />
+                    <input type="password" class="form-control" maxlength="12" minlength="8" formControlName="senha"/>
                 </div>
 
                 <div class="form-group">
+                    
+                    
                     <label>Confirme sua senha</label>
-                    <input type="password" class="form-control" formControlName="chkSenha" />
+                    <input type="password" class="form-control" maxlength="12" minlength="8" formControlName="chkSenha" (input)="confirmaSenha()"/>
+                    <span>{{errorMessageS}}</span>
                     <span class="mostrar-senha" (click)="mostrarSenha()">Mostrar</span>
                 </div>
+
                 <button class="button" (click)="cadastrar()">Confirmar</button>
                 
-            </form>
-        </div>
-        <div id="componentes-pessoas-juridica" style="display: none;">
-            <form [formGroup]="cadastroForm" class="input-table">
-                <div class="form-group">
-                    <label class="escolha-opcao" style="color: rgb(0, 0, 0);">Selecione seu negócio:&nbsp;</label>
-                    <select id="escolha-opcao" formControlName="contratante">
-                        <option value="opcao1">Estabelecimento</option>
-                        <option value="opcao2">Casa de Show</option>
-                        <option value="opcao3">Outro</option>
-                        <!-- Adicione mais opções, se necessário -->
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Nome</label>
-                    <input type="text" class="form-control" formControlName="nome" value="">
-                </div>
-
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" class="form-control" maxlength="15" minlength="3" formControlName="login" />
-                    <span class="mensagem-erro" *ngIf="errorMessage">{{ errorMessage }}</span>
-                </div>
-
-                <div class="form-group">
-                    <label>CPF</label>
-                    <input type="text" class="form-control" formControlName="cpf" />
-                    <span *ngIf="cadastroForm.get('cpf')?.invalid && cadastroForm.get('cpf')?.touched" class="mensagem-erro">
-                        CPF inválido
-                    </span>
-                </div>
-
-
-                <div class="form-group">
-                    <label>CEP</label>
-                    <input type="text" class="form-control" formControlName="cep" />
-                </div>
-
-
-                <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password" class="form-control" formControlName="senha" #senhaInput />
-                </div>
-
-                <div class="form-group">
-                    <label>Confirme sua senha</label>
-                    <input type="password" class="form-control" formControlName="chkSenha" />
-                    <span class="mostrar-senha" (click)="mostrarSenha()">Mostrar</span>
-                </div>
-
-                <button class="button" (click)="cadastrar()">Confirmar</button>
             </form>
         </div>
     </div>

@@ -1,0 +1,93 @@
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<body>
+    <div class="container1">
+        <nav class="navbar">
+            <img src="..\assets\m_arte.png" width="100px" height="100px" routerLink="">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Pesquisar">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <button class="chat-button"><i class="fas fa-comment-alt"></i> Chat</button>
+            <div class="toolbar">
+                <ul>
+                <li><a href="#painel2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vagas<br>em andamento</a></li>
+                <li><a href="#AREAC">&nbsp;&nbsp;&nbsp;Área <br> Cultural</a></li>
+                <button id="profile-icon" class="user-button"><i class="fas fa-user"></i></button>
+                <!-- Adicione quantas opções desejar -->
+                </ul>
+            </div>
+        </nav>
+            <div class="fundo">
+            <div class="container-perfil">
+                <table class="table">
+                    <thead>
+                        <tr *ngFor="let item of midia">
+                            <th>Nome:<h1>{{item.id_Midia}}</h1></th>
+                            <th>Entrada:<h1>{{item.videoUrl}}</h1></th>
+                            <th>Pagamento:<h1>{{item.descricao}}</h1></th>
+                            <th>Descrição:<h1>{{item.id_usuario}}</h1></th>
+                        </tr>
+                    </thead>
+                </table>
+                </div>
+        </div>  
+
+        <div #calendar class="calender"></div>  
+
+        <div id="eventModal" class="modal">
+          <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <h2>Adicionar Evento</h2>
+            <label for="eventTitle">Título:</label>
+            <input type="text" id="eventTitle" [(ngModel)]="newEvent.title">
+            <label for="eventDate">Data:</label>
+            <input type="text" id="eventDate" [(ngModel)]="selectedDate" disabled>
+            <label for="eventDescription">Descrição:</label>
+            <textarea id="eventDescription" [(ngModel)]="newEvent.description"></textarea>
+            <label for="eventTime">Horário:</label>
+            <input type="text" id="eventTime" [(ngModel)]="newEvent.time">
+            <button (click)="addEvent()">Adicionar Evento</button>
+          </div>
+        </div>
+        
+
+
+        <div class="circle-container">
+          <div class="circle" title="Meus Serviços">Serviços</div>
+          <div class="circle" title="Minhas Vagas">Vagas</div>
+        </div>
+        
+
+    </div>
+        <!-- Adicione o código HTML para o carousel de comentários dentro do componente HTML -->
+
+        <div class="avaliacoes">
+          <h2>AVALIAÇÕES RECENTES</h2>
+          <ul>
+            <li><h1>"Serviço incrivel, talento único o seu"</h1><i class="fas fa-user"></i>&nbsp;&nbsp;Jorge Cesar - 5 Estrelas</li>
+            <li><h1>"Muito bom artista, espero poder contar com seu serviço futuramente"</h1><i class="fas fa-user"></i>&nbsp;&nbsp;Jorge Cesar - 5 Estrelas</li>
+            <button class="button">Ver mais avaliações</button>
+          </ul>
+        </div>
+        
+
+        <div class="contratos">
+            <div class="container-contratos">
+              <h2>CONTRATOS RECENTES - PDF</h2>
+              <ul>
+                <table class="table">
+                    <thead>
+                        <tr *ngFor="let item of avaliacoes">
+                            <th>Nome:<h1>{{item.id_Avaliacao}}</h1></th>
+                            <th>Entrada:<h1>{{item.comentario}}</h1></th>
+                            <th>Pagamento:<h1>{{item.nota}}</h1></th>
+                            <th>Descrição:<h1>{{item.id_Usuario}}</h1></th>
+                        </tr>
+                    </thead>
+                </table>
+              </ul>
+        </div>
+      </div> 
+</body>

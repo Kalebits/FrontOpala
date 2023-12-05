@@ -28,24 +28,15 @@ export class PaginaLoginComponent {
 
   login() {
     const loginValue = this.loginForm.get('login')?.value;
-
-    console.log(loginValue);
     if (isCPF(loginValue)) {
-      console.log("OIIII");
-      return "../logada/1";
+      console.log(this.loginForm.value);
+      window.location.href = '/logada';
     } 
     
-    if (isCNPJ(loginValue)) {
-      console.log("XXXXX");
-      return "../logada/2";
-    }
-    
     if (Validacoes.isEmail(loginValue)) {
-      // Verificar se é e-mail válido e fazer a lógica necessária
-      // Para este exemplo, apenas atualizando a mensagem de erro
-      this.errorMessage = 'E-mail válido. Verifique CPF ou CNPJ.';
+      window.location.href = '/logada';
     } else {
-      this.errorMessage = 'Por favor, insira um e-mail, CPF ou CNPJ válido.';
+      this.errorMessage = 'Por favor, insira um e-mail ou CPF válido.';
     }
 
     return null; // Você pode ajustar o retorno conforme a lógica desejada

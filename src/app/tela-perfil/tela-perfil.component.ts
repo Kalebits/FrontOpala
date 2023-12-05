@@ -4,13 +4,14 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import interactionPlugin from '@fullcalendar/interaction';
+import { MidiaService } from '../service/midia.service';
 
 @Component({
-  selector: 'app-tela-perfil-contratante',
-  templateUrl: './tela-perfil-contratante.component.html',
-  styleUrls: ['./tela-perfil-contratante.component.css']
+  selector: 'app-tela-perfil',
+  templateUrl: './tela-perfil.component.html',
+  styleUrls: ['./tela-perfil.component.css']
 })
-export class TelaPerfilContratanteComponent implements AfterViewInit {
+export class TelaPerfilComponent implements AfterViewInit {
   @ViewChild('calendar')
   calendarEl!: ElementRef;
   events: EventInput[] = [];
@@ -18,9 +19,15 @@ export class TelaPerfilContratanteComponent implements AfterViewInit {
   newEvent: { title: string, date: string, description: string, time: string } = { title: '', date: '', description: '', time: '' };
   eventModal!: HTMLElement;
   chatModal!: HTMLElement;
+  midia: Array<any> = [];
+  avaliacao: Array<any> = [];
   
+  constructor(private service:MidiaService) { }
 
   ngAfterViewInit() {
+
+    this.service.listar().subscribe(m => this.midia = m);
+    this.service.listar().subscribe(a => this.avaliacao = a);
     const today = new Date(); // Obtém a data atual
     this.chatModal = document.getElementById('chatModal')!;
     const calendar = new Calendar(this.calendarEl.nativeElement, {
