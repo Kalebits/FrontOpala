@@ -6,6 +6,7 @@ import { PaginaLoginComponent } from './pagina-login/pagina-login.component';
 import { TelaArtistaComponent } from './tela-artista/tela-artista.component';
 
 import { LogadaArtistaComponent } from './logada-artista/logada-artista.component';
+import { TelaPerfilComponent } from './tela-perfil/tela-perfil.component';
 
 const routes: Routes = [
   { path: '', component:PaginaInicialComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component:PaginaLoginComponent },
   { path: 'perfil/:id', component:TelaArtistaComponent },
   { path: 'logada', component:LogadaArtistaComponent },
+  { path: 'perfilM', component:TelaPerfilComponent }
 ];
 
 @NgModule({

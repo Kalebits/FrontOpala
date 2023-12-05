@@ -1,3 +1,6 @@
+/* Estilos aplicados para a tela de cadastro */
+
+/* Barra de navegação */
 .nav {
     position: fixed;
     top: 0;
@@ -12,7 +15,7 @@
     font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
 }
 
-.nav img{
+.nav img {
     margin-left: 40px;
 }
 
@@ -22,56 +25,56 @@
     color: #ffffff;
 }
 
+/* Espaço para login */
 .espaco-login {
-    margin-left: 470px;
-    position: flex;
-    width: 600px; /* Largura do retângulo */
-    height: 720px; /* Altura do retângulo */
-    background-color: #d3f8ff; /* Cor do retângulo */
-    margin-top: 150px; /* Espaço entre a barra de navegação e a div "espaco-login" */
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 720px;
+    background-color: #d3f8ff;
+    margin-top: 150px;
     border: 2px solid black;
     border-radius: 20px;
     border-color: #000000;
-    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.Text1{
- font-size: 20px;
- margin-top: 5px; /* Ajuste a posição vertical conforme necessário */
- margin-left: 220px; /* Posiciona o texto no canto esquerdo */
- font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-}
-
-.Text2{
+.Text1 {
     font-size: 20px;
-    margin-top: 15px; /* Ajuste a posição vertical conforme necessário */
-    margin-left: 10px; /* Posiciona o texto no canto esquerdo */
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    margin-top: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Text2 {
+    font-size: 20px;
+    margin-top: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .form-control {
-    width: 390px; /* Define a largura total do elemento */
-    padding: 8px; /* Adiciona preenchimento interno */
-    margin-bottom: 10px; /* Adiciona espaço abaixo do elemento */
-    border: 1px solid #ccc; /* Adiciona uma borda */
-    border-radius: 8px; /* Adiciona cantos arredondados */
-    box-sizing: border-box; /* Garante que a largura e altura incluam a borda e o preenchimento */
-  }
+    width: 390px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
 
-  .form-group label{
+.form-group label {
     font-size: 20px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-  }
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-  .form-group label:hover {
-    color: #0300a1;  /* Altera a cor do texto ao passar o mouse */
-    cursor: pointer; /* Altera o cursor ao passar o mouse */
-  }
-
+.form-group label:hover {
+    color: #0300a1;
+    cursor: pointer;
+}
 
 .button {
     margin-top: 20px;
-    margin-left: 140px;
     padding: 15px 90px;
     background-color: #000000;
     color: #ffffff;
@@ -82,88 +85,69 @@
     z-index: 2;
     display: flex;
     align-items: center;
-    gap: 5px; /* Espaço entre o ícone e o texto */
+    gap: 5px;
 }
 
 .button:hover {
-    box-shadow: 0 8px 16px #ffffff; ; /* Adicione sombra ao passar o cursor para dar feedback visual */
+    box-shadow: 0 8px 16px #ffffff;
     background-color: #1BAAE0;
     color: #000000;
-  }
+}
 
-
-/* Estilo para o contêiner dos inputs */
+/* Estilo para a tabela de inputs */
 .input-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
-    margin-left: 20px;
-    font-family: "Raleway", sans-serif; /* Define a família da fonte */
+    font-family: "Raleway", sans-serif;
 }
 
-.input-table2 {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-.input-table3 {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-/* Estilo para as células da tabela */
 .input-table td {
     padding: 5px;
     vertical-align: middle;
 }
 
-/* Estilize o elemento <select> */
+/* Estilo para o seletor */
 select#escolha-opcao {
-    width: 200px; /* Define a largura da lista suspensa */
-    padding: 10px; /* Adicione algum espaço interno para melhor aparência */
-    font-size: 16px; /* Tamanho da fonte */
-    border: 1px solid #ccc; /* Adicione uma borda */
-    border-radius: 5px; /* Borda arredondada */
-    background-color: #fff; /* Cor de fundo */
-    color: #333; /* Cor do texto */
-    font-family: "Raleway", sans-serif; /* Define a família da fonte */
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-family: "Raleway", sans-serif;
 }
 
-/* Estilize os elementos <option> dentro do <select> */
 select#escolha-opcao option {
-    background-color: #fff; /* Cor de fundo das opções */
-    color: #333; /* Cor do texto das opções */
+    background-color: #fff;
+    color: #333;
 }
 
-/* Estilo quando o <select> está focado (selecionado) */
 select#escolha-opcao:focus {
-    outline: none; /* Remova a borda de foco padrão */
-    box-shadow: 0 0 5px #1BAAE0; /* Adicione uma sombra quando focado */
+    outline: none;
+    box-shadow: 0 0 5px #1BAAE0;
 }
 
-.button-radio1 {
-    margin-top: 0px; /* Adicione margem abaixo de cada label */
-    margin-left:10px;
-}
-
+/* Estilos para os botões de rádio */
+.button-radio1,
 .button-radio2 {
-    margin-top: 0px; /* Adicione margem abaixo de cada label */
-    margin-left: 20px;
+    margin-top: 0px;
+    margin-left: 10px;
 }
 
-  .mostrar-senha {
+/* Ícone para mostrar/esconder senha */
+.mostrar-senha {
     position: absolute;
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #888; /* Cor do ícone */
+    color: #888;
     z-index: 1;
 }
 
-/* Estilize o campo de senha */
+/* Estilo para o campo de senha */
 .senha-container {
     position: relative;
     display: inline-block;

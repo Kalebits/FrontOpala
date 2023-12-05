@@ -1,4 +1,4 @@
-/*NAVBAR CONTEÚDO*/
+//NAVBAR CONTEÚDO
 .fundo {
     background: linear-gradient(to bottom, #000000 10%, #D8F8FF  10%);
     background-color: #D8F8FF;
@@ -175,7 +175,7 @@
 }
   
   
-  /*PÁGINA*/
+  /PÁGINA/
   .container-principal {
     display: flex;
     flex-wrap: wrap;
@@ -237,7 +237,7 @@
     background: black;
     border-radius: 5px; /* Define o raio da borda */
   }
-  /*PRIMEIRA SEÇÃO*/
+  /PRIMEIRA SEÇÃO/
 
   .section3::before {
     content: ''; /* Adiciona um conteúdo antes do elemento */
@@ -343,7 +343,7 @@
     overflow: hidden; /* Esconde o conteúdo que estourar o container */
   }
   
-  /*SEGUNDA SEÇÃO*/
+  /SEGUNDA SEÇÃO/
   
   /* Ajustes para exibir 3 cards por vez e aumentar o tamanho */
   .section2 {
@@ -477,8 +477,8 @@
   }
   
   .title-image-container h2 {
-    margin-top: -25px; /* Define a margem superior como -25px */
-    margin-left: 50px; /* Define a margem esquerda como 50px */
+    margin-top: 25px; /* Define a margem superior como -25px */
+    margin-left: 10px; /* Define a margem esquerda como 50px */
     font-family: "Raleway", sans-serif; /* Define a família da fonte */
     font-size: 15px; /* Define o tamanho da fonte como 15px */
     line-height: 1.2; /* Define a altura da linha */
@@ -539,7 +539,7 @@
     position: flex;
     margin-top: 20px;
     width: 300px; /* Define a largura como 500px */
-    height: 380px; /* Define a altura como 450px */
+    height: 410px; /* Define a altura como 450px */
     padding: 20px; /* Adiciona preenchimento */
     left: -0px;
     margin-bottom: 20px; /* Define a margem inferior como 20px */
@@ -547,6 +547,20 @@
     border-radius: 8px; /* Define o raio da borda */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.595); /* Adiciona sombra */
   } 
+
+  .button2{
+    padding: 10px 20px;
+    margin-left: 60px;
+    height: 40px;
+    width: 220px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
   
   .prev-button {
     left: 10px; /* Define a posição à esquerda como 10px */
@@ -556,7 +570,7 @@
     right: 10px; /* Define a posição à direita como 10px */
   }
   
-  /*TERCEIRA SEÇÃO*/
+  /TERCEIRA SEÇÃO/
   .section3 {
     position: absolute;
     margin-top: -750px; /* Define a margem superior como 0px */
@@ -938,9 +952,3 @@ ul li i {
   width: 350px;
   margin-left: 1010px;
 }
-
-
-
-
-
- 

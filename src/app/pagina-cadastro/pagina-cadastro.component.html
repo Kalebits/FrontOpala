@@ -16,7 +16,7 @@
                         <label class="text-danger">Nome*</label>
                     </ng-template>
                     <ng-template #nome>Nome*</ng-template>
-                    <input type="text" class="form-control" formControlName="nome" minlength="5" maxlength="37"/>
+                    <input type="text" class="form-control" formControlName="nome" minlength="5" maxlength="37" [(ngModel)]="usuario.nome"/>
                     
                 </div>
 
@@ -25,16 +25,16 @@
                         <label class="text-danger">Email*</label>
                     </ng-template>
                     <ng-template #email>Email*</ng-template>
-                    <input type="email" class="form-control" maxlength="40" minlength="3" formControlName="email" pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/"/>
+                    <input type="email" class="form-control" maxlength="40" minlength="3" formControlName="email" pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/" [(ngModel)]="usuario.email" />
                     
                 </div>
 
                 <div class="form-group">
-                    <ng-template [ngIf]="cadastroForm.get('cpf')?.errors?.['required'] && cadastroForm.get('cpf')?.touched" [ngIfElse]="cpf">
+                    <ng-template [ngIf]="cadastroForm.get('cpf')?.errors?.['required'] && cadastroForm.get('cpf')?.touched" [ngIfElse]="cpf" >
                         <label class="text-danger">CPF*</label>
                     </ng-template>
                     <ng-template #cpf>CPF*</ng-template>
-                    <input type="text" class="form-control" formControlName="cpf" />
+                    <input type="text" class="form-control" formControlName="cpf" [(ngModel)]="usuario.cpf"/>
                     <span class="mensagem-erro" *ngIf="errorMessage">{{ errorMessage }}</span>
                 </div>
 
@@ -48,13 +48,13 @@
 
                     <ng-template #celular><label>Celular</label></ng-template>
 
-                    <input type="text" class="form-control" formControlName="tel" />
+                    <input type="text" class="form-control" formControlName="tel" [(ngModel)]="usuario.telefone" />
                     <span class="mensagem-erro">{{errorMessageT}}</span>
                 </div>
 
                 <div class="form-group">
                     <label>Senha</label>
-                    <input type="password" class="form-control" maxlength="12" minlength="8" formControlName="senha"/>
+                    <input type="password" class="form-control" maxlength="12" minlength="8" formControlName="senha" [(ngModel)]="usuario.senha"/>
                 </div>
 
                 <div class="form-group">

@@ -6,6 +6,8 @@ import { isCPF, isCNPJ, isPhone, formatToPhone } from 'brazilian-values';
 import { z } from 'zod';
 import  v8n  from 'v8n';
 import { ReactiveFormsModule } from "@angular/forms";
+import { UsuarioService } from 'app/service/usuario-.service';
+import { IUsuario } from 'app/model/IUsuario.model';
 
 
 @Component({
@@ -25,7 +27,15 @@ export class PaginaCadastroComponent {
 
   isSenhaVisivel: boolean = false;
 
-  constructor(private router: Router, private builder: FormBuilder) {
+  usuario: IUsuario ={
+    nome: '',
+    cpf: '',
+    email: '',
+    senha: '',
+    telefone: null
+  };
+
+  constructor(private router: Router, private builder: FormBuilder, private usuarioService: UsuarioService) {
     this.cadastroForm = builder.group({
       nome: ['', Validators.required],
       genero: ['', Validators.required],
@@ -81,15 +91,21 @@ export class PaginaCadastroComponent {
     }
   }
 
-  cadastrar() {
+  cadastrar(): void {
     const cadastroValue = this.cadastroForm.value;
 
-    if(cadastroValue.tel != null){
+    if(cadastroValue.tel != null && isPhone(formatToPhone(cadastroValue.tel))){
       if(isPhone(formatToPhone(cadastroValue.tel)))
       {
         if (isCPF(cadastroValue.cpf)) {
-          console.log(this.cadastroForm.value)
-          window.location.href = '/logada';
+          this.usuarioService.cadastrarUsuario(this.usuario).subscribe(retorno => {
+            this.usuario = retorno;
+            this.usuarioService.exibirMensagem('Sistema', `${this.usuario.nome} foi cadastrado com sucesso. ID: ${this.usuario.id}`,
+            'toast-success');
+            
+            // Lógica para lidar com a resposta do backend
+          });
+        
         }
         else{
           this.errorMessage = 'Por favor, insira um CPF válido.';
@@ -104,8 +120,17 @@ export class PaginaCadastroComponent {
     }
 
     if (isCPF(cadastroValue.cpf)) {
-      console.log(this.cadastroForm.value)
-      window.location.href = '/logada';
+      console.log
+      this.usuarioService.cadastrarUsuario(cadastroValue).subscribe((resposta: any) => {
+        console.log('Usuário cadastrado com sucesso:', resposta);
+        this.router.navigate(['/logada']);
+        // Lógica para lidar com a resposta do backend
+      },
+      (erro: any) => {
+        console.error('Erro ao cadastrar o usuário:', erro);
+        this.errorMessage = 'Erro ao cadastrar o usuário. Por favor, tente novamente.';
+        // Lógica para lidar com erros de requisição
+      });
     }  
     else if(!isCPF(cadastroValue.cpf)){
       this.errorMessage = 'Por favor, insira um CPF válido.';

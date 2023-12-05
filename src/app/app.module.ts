@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from "@angular/forms";
+import {HttpClientModule} from '@angular/common/http'
+import {ToastrModule} from 'ngx-toastr'
 
 
 import { AppComponent } from './app.component';
@@ -30,7 +32,9 @@ import { TelaPerfilComponent } from './tela-perfil/tela-perfil.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

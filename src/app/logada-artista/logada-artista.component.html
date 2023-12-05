@@ -1,334 +1,358 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <body>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <nav class="navbar">
-        <img src="..\assets\m_arte.png" width="100px" height="100px" routerLink="">
-        <div class="search-box">
-            <input type="text" class="search-input" placeholder="Pesquisar">
-            <button class="search-button"><i class="fas fa-search"></i></button>
-        </div>
-        <button class="chat-button"><i class="fas fa-comment-alt"></i> Chat</button>
-        <div class="toolbar">
-            <ul>
-              <li><a href="#painel2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vagas<br>em andamento</a></li>
-              <li><a href="#AREAC">&nbsp;&nbsp;&nbsp;Área <br> Cultural</a></li>
-              <button id="profile-icon" class="user-button"><i class="fas fa-user"></i></button>
-              <!-- Adicione quantas opções desejar -->
-            </ul>
-          </div>
-    </nav>
-
-    <div class="title-image-container2">
-        <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-        <h2 style="color: black; font-size: 30px;"><br>VAGAS<br> RECENTES</h2>
+  <nav class="navbar">
+    <img src="..\assets\m_arte.png" width="100px" height="100px" routerLink="">
+    <div class="search-box">
+        <input type="text" class="search-input" placeholder="Pesquisar">
+        <button class="search-button"><i class="fas fa-search"></i></button>
     </div>
-    <div class="container-principal">
-        <div class="card2" *ngFor="let item of contratantes"> 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
-                        <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
-                        <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
-                        <th>Descrição:<h1>{{item.descricao}}</h1></th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-        <div class="card2" *ngFor="let item of contratantes"> 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
-                        <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
-                        <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
-                        <th>Descrição:<h1>{{item.descricao}}</h1></th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-    </div>
-
-    <div class="title-image-container3">
-        <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-        <h2 style="color: black; font-size: 30px;"><br>ARTISTAS<br> DISPONÍVEIS</h2>
-    </div>
-    <div class="container-principal2">
-        <div class="card2" *ngFor="let item of artistas"> 
-            <table class="table">
-                <thead>
-                    <tr>
-                      <th>Nome:<h1>{{item.nome}}</h1></th>
-                      <th>Tipo:<h1>{{item.tipo}}</h1></th>
-                      <th>Descrição:<h1>{{item.descricao}}</h1></th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-        <div class="card2" *ngFor="let item of artistas"> 
-            <table class="table">
-                <thead>
-                    <tr>
-                      <th>Nome:<h1>{{item.nome}}</h1></th>
-                      <th>Tipo:<h1>{{item.tipo}}</h1></th>
-                      <th>Descrição:<h1>{{item.descricao}}</h1></th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-    </div>
-
-
-    <div class="container-principal4">
-      <div class="title-image-container5">
-        <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-        <h2><br>OUTROS<br> ARTISTAS</h2>
-    </div>
-        <div class="card6" style="max-width: 18rem;">
-          <div class="ratio ratio-16x9">
-            <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="card6-body">
-            <h5 class="card6-title">Legião Urbana</h5>
-            <p class="card6-text">Pais e Filhos</p>
-            <p class="card6-text2">Há 4 dias</p>
-          </div>
-        </div>
-        <div class="card6" style="max-width: 18rem;">
-          <div class="ratio ratio-16x9">
-            <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="card6-body">
-            <h5 class="card6-title">Legião Urbana</h5>
-            <p class="card6-text">Pais e Filhos</p>
-            <p class="card6-text2">Há 4 dias</p>
-          </div>
-        </div>
-        <div class="card6" style="max-width: 18rem;">
-          <div class="ratio ratio-16x9">
-            <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="card6-body">
-            <h5 class="card6-title">Legião Urbana</h5>
-            <p class="card6-text">Pais e Filhos</p>
-            <p class="card6-text2">Há 4 dias</p>
-          </div>
-        </div>
-        <div class="card6" style="max-width: 18rem;">
-          <div class="ratio ratio-16x9">
-            <iframe width="1324" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="card6-body">
-            <h5 class="card6-title">Legião Urbana</h5>
-            <p class="card6-text">Pais e Filhos</p>
-            <p class="card6-text2">Há 4 dias</p>
-          </div>
-        </div>
-  </div>
-
-  <div class="container-principal5">
-    <div class="card6" style="max-width: 18rem;">
-      <div class="ratio ratio-16x9">
-        <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="toolbar">
+        <ul>
+          <li><a href="#painel2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vagas<br>em andamento</a></li>
+          <li><a href="#AREAC">&nbsp;&nbsp;&nbsp;Área <br> Cultural</a></li>
+          <button id="profile-icon" class="user-button"><i class="fas fa-user"></i></button>
+        </ul>
       </div>
-      <div class="card6-body">
-        <h5 class="card6-title">Legião Urbana</h5>
-        <p class="card6-text">Pais e Filhos</p>
-        <p class="card6-text2">Há 4 dias</p>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
       </div>
     </div>
-    <div class="card6" style="max-width: 18rem;">
-      <div class="ratio ratio-16x9">
-        <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title-image-container2">
+          <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
+          <h2 style="color: black; font-size: 30px;"><br>VAGAS<br> RECENTES</h2>
       </div>
-      <div class="card6-body">
-        <h5 class="card6-title">Legião Urbana</h5>
-        <p class="card6-text">Pais e Filhos</p>
-        <p class="card6-text2">Há 4 dias</p>
+      <div class="container-principal">
+          <div class="card2" *ngFor="let item of contratantes"> 
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
+                          <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
+                          <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
+                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
+                      </tr>
+                  </thead>
+              </table>
+          </div>
+          <div class="card2" *ngFor="let item of contratantes"> 
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
+                          <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
+                          <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
+                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
+                      </tr>
+                  </thead>
+              </table>
+          </div>
+      </div>
+  
       </div>
     </div>
-    <div class="card6" style="max-width: 18rem;">
-      <div class="ratio ratio-16x9">
-        <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="card6-body">
-        <h5 class="card6-title">Legião Urbana</h5>
-        <p class="card6-text">Pais e Filhos</p>
-        <p class="card6-text2">Há 4 dias</p>
-      </div>
-    </div>
-    <div class="card6" style="max-width: 18rem;">
-      <div class="ratio ratio-16x9">
-        <iframe width="1324" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="card6-body">
-        <h5 class="card6-title">Legião Urbana</h5>
-        <p class="card6-text">Pais e Filhos</p>
-        <p class="card6-text2">Há 4 dias</p>
-      </div>
-    </div>
-</div>
 
-    
-
-
-    <div id="AREAC" class="section1">
-        <!-- Conteúdo da segunda seção -->
-        <div class="title-image-container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-6">
+          <div class="title-image-container3">
             <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-            <h2><br>ÁREA<br> CULTURAL</h2>
+            <h2 style="color: black; font-size: 30px;"><br>ARTISTAS<br> DISPONÍVEIS</h2>
         </div>
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <a href="https://www.cnnbrasil.com.br/economia/taylor-swift-rbd-the-town-shows-internacionais-animam-fas-e-movimentam-economia-das-cidades/">
-                <div class="card">
-                    <div class="card-img-overlay">
-                      <h5 class="card-title">CNN</h5>
-                      <p class="card-text">Taylor Swift, RBD, The Town: shows internacionais animam fãs e movimentam economia das cidades</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <a href="https://g1.globo.com/pop-arte/musica/blog/mauro-ferreira/post/2023/12/01/kevin-o-chris-ecoa-tamborzao-raiz-com-ep-que-traz-as-seis-faixas-do-ultimo-volume.ghtml">
-              <div class="carousel-item">
-                <div class="card3">
-                    <div class="card-img-overlay">
-                      <h5 class="card3-title">G1</h5>
-                      <p class="card3-text">Kevin O Chris ecoa 'Tamborzão raiz' com EP que traz as seis faixas do último volume</p>
-                    </div>
-                  </div>
-              </div>
-              </a>
-              <div class="carousel-item">
-               <div class="card">
-                <div class="card-img-overlay">
-                  <h5 class="card-title">CNN</h5>
-                  <p class="card-text">Taylor Swift, RBD, The Town: shows internacionais animam fãs e movimentam economia das cidades</p>
-                </div>
-              </div>
-              </div>
+        <div class="container-principal2">
+            <div class="card2" *ngFor="let item of artistas"> 
+                <table class="table">
+                    <thead>
+                        <tr>
+                          <th>Nome:<h1>{{item.nome}}</h1></th>
+                          <th>Tipo:<h1>{{item.tipo}}</h1></th>
+                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
-          <div id="carouselExampleFade" class="carousel2 slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <a href="https://g1.globo.com/ma/maranhao/cultura/noticia/2023/12/01/exposicoes-de-arte-fotografia-e-shows-saiba-o-que-curtir-de-graca-em-sao-luis-no-mes-de-dezembro.ghtml">
-                <div class="card4">
-                    <div class="card-img-overlay">
-                      <h5 class="card4-title">G1</h5>
-                      <p class="card4-text">Exposições de arte, fotografia e shows: saiba o que curtir de graça em São Luís no mês de dezembro</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <a href="https://www.gov.br/iphan/pt-br/assuntos/noticias/exposicao-fotografica-apresenta-a-diversidade-da-cultura-popular-no-distrito-federal">
-              <div class="carousel-item">
-                <div class="card5">
-                    <div class="card-img-overlay">
-                      <h5 class="card5-title">GOV</h5>
-                      <p class="card5-text">Exposição fotográfica apresenta a diversidade da cultura popular no Distrito Federal</p>
-                    </div>
-                  </div>
-              </div>
-              </a>
-              <div class="carousel-item">
-               <div class="card">
-                <div class="card-img-overlay">
-                  <h5 class="card-title">CNN</h5>
-                  <p class="card-text">Taylor Swift, RBD, The Town: shows internacionais animam fãs e movimentam economia das cidades</p>
-                </div>
-              </div>
-              </div>
+            <div class="card2" *ngFor="let item of artistas"> 
+                <table class="table">
+                    <thead>
+                        <tr>
+                          <th>Nome:<h1>{{item.nome}}</h1></th>
+                          <th>Tipo:<h1>{{item.tipo}}</h1></th>
+                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+        </div>
+        </div>
+      </div>
     </div>
 
-    <div class="title-image-container4">
-        <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-        <h2 style="color: black; font-size: 30px;"><br>VAGAS<br> EM ANDAMENTO</h2>
-    </div>
-    <div class="container-principal3">
-        <div class="card2" *ngFor="let item of contratantes"> 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
-                        <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
-                        <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
-                        <th>Descrição:<h1>{{item.descricao}}</h1></th>
-                    </tr>
-                </thead>
-            </table>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container-principal4">
+          <div class="title-image-container5">
+            <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
+            <h2><br>OUTROS<br> ARTISTAS</h2>
         </div>
-        <div class="card2" *ngFor="let item of contratantes"> 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
-                        <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
-                        <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
-                        <th>Descrição:<h1>{{item.descricao}}</h1></th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
+            <div class="card6" style="max-width: 18rem;">
+              <div class="ratio ratio-16x9">
+                <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="card6-body">
+                <h5 class="card6-title">Legião Urbana</h5>
+                <p class="card6-text">Pais e Filhos</p>
+                <p class="card6-text2">Há 4 dias</p>
+              </div>
+            </div>
+            <div class="card6" style="max-width: 18rem;">
+              <div class="ratio ratio-16x9">
+                <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="card6-body">
+                <h5 class="card6-title">Legião Urbana</h5>
+                <p class="card6-text">Pais e Filhos</p>
+                <p class="card6-text2">Há 4 dias</p>
+              </div>
+            </div>
+            <div class="card6" style="max-width: 18rem;">
+              <div class="ratio ratio-16x9">
+                <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="card6-body">
+                <h5 class="card6-title">Legião Urbana</h5>
+                <p class="card6-text">Pais e Filhos</p>
+                <p class="card6-text2">Há 4 dias</p>
+              </div>
+            </div>
+            <div class="card6" style="max-width: 18rem;">
+              <div class="ratio ratio-16x9">
+                <iframe width="1324" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="card6-body">
+                <h5 class="card6-title">Legião Urbana</h5>
+                <p class="card6-text">Pais e Filhos</p>
+                <p class="card6-text2">Há 4 dias</p>
+              </div>
+            </div>
+      </div>
+      </div>
     </div>
-    <div class="container-list">
-      <div class="title-image-container6">
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="container-principal5">
+          <div class="card6" style="max-width: 18rem;">
+            <div class="ratio ratio-16x9">
+              <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="card6-body">
+              <h5 class="card6-title">Legião Urbana</h5>
+              <p class="card6-text">Pais e Filhos</p>
+              <p class="card6-text2">Há 4 dias</p>
+            </div>
+          </div>
+          <div class="card6" style="max-width: 18rem;">
+            <div class="ratio ratio-16x9">
+              <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="card6-body">
+              <h5 class="card6-title">Legião Urbana</h5>
+              <p class="card6-text">Pais e Filhos</p>
+              <p class="card6-text2">Há 4 dias</p>
+            </div>
+          </div>
+          <div class="card6" style="max-width: 18rem;">
+            <div class="ratio ratio-16x9">
+              <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="card6-body">
+              <h5 class="card6-title">Legião Urbana</h5>
+              <p class="card6-text">Pais e Filhos</p>
+              <p class="card6-text2">Há 4 dias</p>
+            </div>
+          </div>
+          <div class="card6" style="max-width: 18rem;">
+            <div class="ratio ratio-16x9">
+              <iframe width="1324" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="card6-body">
+              <h5 class="card6-title">Legião Urbana</h5>
+              <p class="card6-text">Pais e Filhos</p>
+              <p class="card6-text2">Há 4 dias</p>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div id="AREAC" class="section1">
+          <div class="title-image-container">
+              <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
+              <h2><br>ÁREA<br> CULTURAL</h2>
+          </div>
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href="https://www.cnnbrasil.com.br/economia/taylor-swift-rbd-the-town-shows-internacionais-animam-fas-e-movimentam-economia-das-cidades/">
+                  <div class="card">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">CNN</h5>
+                        <p class="card-text">Taylor Swift, RBD, The Town: shows internacionais animam fãs e movimentam economia das cidades</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <a href="https://g1.globo.com/pop-arte/musica/blog/mauro-ferreira/post/2023/12/01/kevin-o-chris-ecoa-tamborzao-raiz-com-ep-que-traz-as-seis-faixas-do-ultimo-volume.ghtml">
+                <div class="carousel-item">
+                  <div class="card3">
+                      <div class="card-img-overlay">
+                        <h5 class="card3-title">G1</h5>
+                        <p class="card3-text">Kevin O Chris ecoa 'Tamborzão raiz' com EP que traz as seis faixas do último volume</p>
+                      </div>
+                    </div>
+                </div>
+                </a>
+                <div class="carousel-item">
+                 <div class="card">
+                  <div class="card-img-overlay">
+                    <h5 class="card-title">CNN</h5>
+                    <p class="card-text">Taylor Swift, RBD, The Town: shows internacionais animam fãs e movimentam economia das cidades</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+  
+            <div id="carouselExampleFade" class="carousel2 slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href="https://g1.globo.com/ma/maranhao/cultura/noticia/2023/12/01/exposicoes-de-arte-fotografia-e-shows-saiba-o-que-curtir-de-graca-em-sao-luis-no-mes-de-dezembro.ghtml">
+                  <div class="card4">
+                      <div class="card-img-overlay">
+                        <h5 class="card4-title">G1</h5>
+                        <p class="card4-text">Exposições de arte, fotografia e shows: saiba o que curtir de graça em São Luís no mês de dezembro</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <a href="https://www.gov.br/iphan/pt-br/assuntos/noticias/exposicao-fotografica-apresenta-a-diversidade-da-cultura-popular-no-distrito-federal">
+                <div class="carousel-item">
+                  <div class="card5">
+                      <div class="card-img-overlay">
+                        <h5 class="card5-title">GOV</h5>
+                        <p class="card5-text">Exposição fotográfica apresenta a diversidade da cultura popular no Distrito Federal</p>
+                      </div>
+                    </div>
+                </div>
+                </a>
+                <div class="carousel-item">
+                 <div class="card">
+                  <div class="card-img-overlay">
+                    <h5 class="card-title">CNN</h5>
+                    <p class="card-text">Taylor Swift, RBD, The Town: shows internacionais animam fãs e movimentam economia das cidades</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="title-image-container4">
+          <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
+          <h2 style="color: black; font-size: 30px;"><br>VAGAS<br> EM ANDAMENTO</h2>
+      </div>
+      <div class="container-principal3">
+          <div class="card2" *ngFor="let item of contratantes"> 
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
+                          <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
+                          <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
+                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
+                      </tr>
+                  </thead>
+              </table>
+          </div>
+          <div class="card2" *ngFor="let item of contratantes"> 
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
+                          <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
+                          <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
+                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
+                      </tr>
+                  </thead>
+              </table>
+          </div>
+      </div>
+      </div>
+      <div class="col-md-6">
+        <div class="container-list">
+          <div class="title-image-container6">
+            <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
+            <h2 style="color: black; font-size: 30px;"><br>FÓRUM<br> M ARTE</h2>
+        </div>
+        <ul>
+          <li>Violão Giannini para <br> iniciantes<h1>Caio Dias - Intermediario</h1></li>
+          <li>Lentes Sigma <br> processos de fabricação<h1>Luana Martins - Avançado</h1></li>
+          <li>Indicação para isolamento <br> acústico Stéreo<h1>Karla Andrade - Intermediario</h1></li>
+          <button class="button">Ver mais tópicos &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
+      </ul>
+    </div>
+    
+    <div class="container-list2">
+      <div class="title-image-container7">
         <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-        <h2 style="color: black; font-size: 30px;"><br>FÓRUM<br> M ARTE</h2>
+        <h2 style="color: black; font-size: 30px;"><br>MELHORES <br> AVALIAÇÕES - ARTISTAS</h2>
     </div>
     <ul>
-      <li>Violão Giannini para <br> iniciantes<h1>Caio Dias - Intermediario</h1></li>
-      <li>Lentes Sigma <br> processos de fabricação<h1>Luana Martins - Avançado</h1></li>
-      <li>Indicação para isolamento <br> acústico Stéreo<h1>Karla Andrade - Intermediario</h1></li>
-      <button class="button">Ver mais tópicos &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
-  </ul>
-</div>
-
-<div class="container-list2">
-  <div class="title-image-container7">
-    <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-    <h2 style="color: black; font-size: 30px;"><br>MELHORES <br> AVALIAÇÕES - ARTISTAS</h2>
-</div>
-<ul>
-  <li><i class="fas fa-user"></i>&nbsp;&nbsp;Jorge Cesar<h1>5 Estrelas - 105 contratações - Músico</h1></li>
-  <li><i class="fas fa-user"></i>&nbsp;&nbsp;Leticia Fergari<h1>5 Estrelas - 97 contratações - Cantora</h1></li>
-  <li><i class="fas fa-user"></i>&nbsp;&nbsp;Lucas Torres<h1>4.5 Estrelas - 97 contratações - Dançarino</h1></li>
-  <button class="button">Ver mais artistas &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
-</ul>
-</div>
-<div class="container-list3">
-  <div class="title-image-container7">
-    <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-    <h2 style="color: black; font-size: 30px;"><br>MELHORES <br> AVALIAÇÕES - CONTRATANTES</h2>
-</div>
-<ul>
-  <li>&nbsp;&nbsp;Barzin da Esquina<h1>5 Estrelas - 304 contratações - São Paulo</h1></li>
-  <li>&nbsp;&nbsp;Spettos Bar<h1>5 Estrelas - 208 contratações - Guarulhos</h1></li>
-  <li>&nbsp;&nbsp;Biscuit Eventos<h1>4.5 Estrelas - 180 contratações - Rio de Janeiro</h1></li>
-  <button class="button">Ver mais artistas &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
-</ul>
-</div>
-<div class="container-principal">
-</div>
+      <li><i class="fas fa-user"></i>&nbsp;&nbsp;Jorge Cesar<h1>5 Estrelas - 105 contratações - Músico</h1></li>
+      <li><i class="fas fa-user"></i>&nbsp;&nbsp;Leticia Fergari<h1>5 Estrelas - 97 contratações - Cantora</h1></li>
+      <li><i class="fas fa-user"></i>&nbsp;&nbsp;Lucas Torres<h1>4.5 Estrelas - 97 contratações - Dançarino</h1></li>
+      <button class="button">Ver mais artistas &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
+    </ul>
+    </div>
+    <div class="container-list3">
+      <div class="title-image-container7">
+        <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
+        <h2 style="color: black; font-size: 30px;"><br>MELHORES <br> AVALIAÇÕES - CONTRATANTES</h2>
+    </div>
+    <ul>
+      <li>&nbsp;&nbsp;Barzin da Esquina<h1>5 Estrelas - 304 contratações - São Paulo</h1></li>
+      <li>&nbsp;&nbsp;Spettos Bar<h1>5 Estrelas - 208 contratações - Guarulhos</h1></li>
+      <li>&nbsp;&nbsp;Biscuit Eventos<h1>4.5 Estrelas - 180 contratações - Rio de Janeiro</h1></li>
+      <button class="button">Ver mais artistas &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
+    </ul>
+    </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </body>
-
-

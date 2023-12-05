@@ -5,6 +5,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import interactionPlugin from '@fullcalendar/interaction';
 import { MidiaService } from '../service/midia.service';
+import { AvaliacaoService } from 'app/service/avaliacao.service';
 
 @Component({
   selector: 'app-tela-perfil',
@@ -22,12 +23,12 @@ export class TelaPerfilComponent implements AfterViewInit {
   midia: Array<any> = [];
   avaliacao: Array<any> = [];
   
-  constructor(private service:MidiaService) { }
+  constructor(private serviceM:MidiaService, private serviceA:AvaliacaoService) { }
 
   ngAfterViewInit() {
 
-    this.service.listar().subscribe(m => this.midia = m);
-    this.service.listar().subscribe(a => this.avaliacao = a);
+    this.serviceM.listar().subscribe(m => this.midia = m);
+    this.serviceA.listar().subscribe(a => this.avaliacao = a);
     const today = new Date(); // Obtém a data atual
     this.chatModal = document.getElementById('chatModal')!;
     const calendar = new Calendar(this.calendarEl.nativeElement, {
