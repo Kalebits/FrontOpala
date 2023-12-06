@@ -94,10 +94,11 @@ export class PaginaCadastroComponent {
   cadastrar(): void {
     const cadastroValue = this.cadastroForm.value;
 
-    if(cadastroValue.tel != null && isPhone(formatToPhone(cadastroValue.tel))){
+    if(this.usuario.telefone != null && isPhone(formatToPhone(cadastroValue.tel))){
       if(isPhone(formatToPhone(cadastroValue.tel)))
       {
-        if (isCPF(cadastroValue.cpf)) {
+        if (isCPF(this.usuario.cpf)) {
+          console.log(this.usuario)
           this.usuarioService.cadastrarUsuario(this.usuario).subscribe(retorno => {
             this.usuario = retorno;
             this.usuarioService.exibirMensagem('Sistema', `${this.usuario.nome} foi cadastrado com sucesso. ID: ${this.usuario.id}`,
@@ -117,29 +118,6 @@ export class PaginaCadastroComponent {
     }
     else{
       this.errorMessageT = null;
-    }
-
-    if (isCPF(cadastroValue.cpf)) {
-      console.log
-      this.usuarioService.cadastrarUsuario(cadastroValue).subscribe((resposta: any) => {
-        console.log('Usuário cadastrado com sucesso:', resposta);
-        this.router.navigate(['/logada']);
-        // Lógica para lidar com a resposta do backend
-      },
-      (erro: any) => {
-        console.error('Erro ao cadastrar o usuário:', erro);
-        this.errorMessage = 'Erro ao cadastrar o usuário. Por favor, tente novamente.';
-        // Lógica para lidar com erros de requisição
-      });
-    }  
-    else if(!isCPF(cadastroValue.cpf)){
-      this.errorMessage = 'Por favor, insira um CPF válido.';
-    }
-    else{
-      this.errorMessage = null;
-    }
-
-    
-     
+    } 
   }
 }

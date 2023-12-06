@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from "@angular/forms";
 import {HttpClientModule} from '@angular/common/http'
 import {ToastrModule} from 'ngx-toastr'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 
 import { AppComponent } from './app.component';
@@ -26,7 +27,7 @@ import { TelaPerfilComponent } from './tela-perfil/tela-perfil.component';
     PaginaCadastroComponent,
     TelaArtistaComponent,
     LogadaArtistaComponent,
-    TelaPerfilComponent
+    TelaPerfilComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +35,7 @@ import { TelaPerfilComponent } from './tela-perfil/tela-perfil.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
   providers: [],

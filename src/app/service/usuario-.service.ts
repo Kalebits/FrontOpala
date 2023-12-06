@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IUsuario } from 'app/model/IUsuario.model';
 import { ToastrService } from 'ngx-toastr';
-import { Observable, catchError, map, throwError } from 'rxjs';
+import { EMPTY, Observable, catchError, map} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +25,6 @@ export class UsuarioService {
 
   exibirErro(e: any): Observable<any>{
     this.exibirMensagem('Erro!!!', 'Não foi possivel realizar a operação', 'toast-error');
-    return throwError(e);
+    return EMPTY;
   }
 }
