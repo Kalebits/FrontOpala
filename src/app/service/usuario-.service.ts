@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ILogin } from 'app/model/ILogin.model';
 import { IUsuario } from 'app/model/IUsuario.model';
 import { ToastrService } from 'ngx-toastr';
-import { EMPTY, Observable, catchError, map} from 'rxjs';
+import { EMPTY, Observable, catchError, map, tap} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class UsuarioService {
 
   cadastrarUsuario(usuario: IUsuario): Observable<IUsuario>{
     return this.http.post<IUsuario>(this.API, usuario).pipe(
-      map(retorno=> retorno),
+      map(retorno=> {retorno
+      return true;}),
        catchError(erro => this.exibirErro(erro)))
   }
 
@@ -27,4 +29,22 @@ export class UsuarioService {
     this.exibirMensagem('Erro!!!', 'Não foi possivel realizar a operação', 'toast-error');
     return EMPTY;
   }
+
+  exibirErroLogin(e: any): Observable<any>{
+    this.exibirMensagem('Erro!', 'Não foi possivel encontrar tal combinação de E-Mail/CPF e senha', 'toast-error');
+    return EMPTY;
+  }
+
+  logarUsuario(usuario: ILogin): Observable<ILogin>{
+    
+    return this.http.post<any>(`${this.API}/login`, usuario).pipe(
+      tap(retorno => {
+        retorno;
+        return true;
+      }),
+      catchError(erro => this.exibirErroLogin(erro)))
+    
+  }
+
+
 }

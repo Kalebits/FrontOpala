@@ -4,5 +4,6 @@ export interface IUsuario{
     cpf: string;
     email: string;
     senha: string;
-    telefone: number | null;
+    telefone: string;
+    genero: string;
 }

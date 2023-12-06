@@ -32,7 +32,8 @@ export class PaginaCadastroComponent {
     cpf: '',
     email: '',
     senha: '',
-    telefone: null
+    telefone: '',
+    genero: ''
   };
 
   constructor(private router: Router, private builder: FormBuilder, private usuarioService: UsuarioService) {
@@ -94,13 +95,15 @@ export class PaginaCadastroComponent {
   cadastrar(): void {
     const cadastroValue = this.cadastroForm.value;
 
-    if(this.usuario.telefone != null && isPhone(formatToPhone(cadastroValue.tel))){
-      if(isPhone(formatToPhone(cadastroValue.tel)))
-      {
+    if(this.usuario.telefone != null && isPhone(formatToPhone(this.usuario.telefone))){
+      this.errorMessageT = null;
+      
         if (isCPF(this.usuario.cpf)) {
-          console.log(this.usuario)
           this.usuarioService.cadastrarUsuario(this.usuario).subscribe(retorno => {
             this.usuario = retorno;
+            if(retorno){
+              window.location.href = '/logada';
+            }
             this.usuarioService.exibirMensagem('Sistema', `${this.usuario.nome} foi cadastrado com sucesso. ID: ${this.usuario.id}`,
             'toast-success');
             
@@ -111,13 +114,11 @@ export class PaginaCadastroComponent {
         else{
           this.errorMessage = 'Por favor, insira um CPF válido.';
         }
-      }
-      else{
-        this.errorMessageT = 'Por favor, insira um número de Celular válido.'
-      }
+      
+     
     }
     else{
-      this.errorMessageT = null;
+      this.errorMessageT = 'Por favor, insira um número de Celular válido.'
     } 
   }
 }

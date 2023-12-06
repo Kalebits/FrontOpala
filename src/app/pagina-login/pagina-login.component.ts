@@ -6,6 +6,8 @@ import { Validacoes } from '../validacoes';
 import { z } from "zod";
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { isCPF, isCNPJ } from 'brazilian-values';
+import { ILogin } from 'app/model/ILogin.model';
+import { UsuarioService } from 'app/service/usuario-.service';
 
 @Component({
   selector: 'app-pagina-login',
@@ -19,7 +21,11 @@ export class PaginaLoginComponent {
   loginForm: FormGroup;
   errorMessage: string | null = null;
 
-  constructor(private builder: FormBuilder) {
+  loginx: ILogin = {
+    senha: '',
+  };
+
+  constructor(private builder: FormBuilder, private usuarioService: UsuarioService) {
     this.loginForm = builder.group({
       login: ['', Validators.required], // Modifiquei para um campo vazio, para aceitar CPF/CNPJ/Email
       senha: ['', Validators.required]
@@ -28,17 +34,28 @@ export class PaginaLoginComponent {
 
   login() {
     const loginValue = this.loginForm.get('login')?.value;
-    if (isCPF(loginValue)) {
-      console.log(this.loginForm.value);
-      window.location.href = '/logada';
-    } 
-    
-    if (Validacoes.isEmail(loginValue)) {
-      window.location.href = '/logada';
-    } else {
-      this.errorMessage = 'Por favor, insira um e-mail ou CPF válido.';
-    }
 
-    return null; // Você pode ajustar o retorno conforme a lógica desejada
+    if (isCPF(loginValue)) {
+      this.loginx.cpf = loginValue;
+      
+      this.usuarioService.logarUsuario(this.loginx).subscribe(retorno => {
+        if (retorno) {
+          window.location.href = '/logada';
+        }
+      }
+      );
+    }
+    else{
+      this.loginx.email = loginValue;
+
+      this.usuarioService.logarUsuario(this.loginx).subscribe(retorno => {
+        if (retorno) {
+          window.location.href = '/logada';
+        }
+      });
+    }
+  }
 }
-}
+
+
+

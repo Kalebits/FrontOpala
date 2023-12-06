@@ -110,7 +110,7 @@ color: #bf1313;
 }
 
 
-/PÁGINA TOPO/
+/*PÁGINA TOPO*/
 .container-principal {
   display: flex;
   flex-wrap: wrap;
@@ -183,6 +183,41 @@ color: #bf1313;
   margin-left: 4%;
 }
 
+.card6 {
+  position: absolute;
+  background-color:#ffffff;
+  position: relative;
+  width: 900px; /* Defina a largura máxima conforme necessário */
+  height: 280px;
+  border-radius: 10px;
+  margin-top: -90px; /* Ajuste a margem conforme desejado */
+  overflow: hidden;
+  margin: 1em auto;
+}
+
+.card6-title {
+  margin-left: 5px;
+  margin-top: 15px;
+  font-size: 15px; /* Tamanho do título */
+  margin-bottom: 10px; /* Espaçamento inferior do título */
+  color: #2190a3;
+}
+
+.card6-text {
+  margin-left: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #000000;
+  font-size: 15px; /* Tamanho do texto */
+  line-height: 1.4; /* Altura da linha do texto */
+}
+
+.card6-text2 {
+  margin-left: 5px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 15px; /* Tamanho do texto */
+  line-height: 1.4; /* Altura da linha do texto */
+}
+
 /* */
 
 /* Em Andamento */
@@ -197,7 +232,7 @@ color: #bf1313;
 }
 
 
-/PRIMEIRA SEÇÃO/
+/*PRIMEIRA SEÇÃO*/
 
  .section1 {
   position: absolute;
@@ -357,8 +392,16 @@ color: #bf1313;
   align-items: center; /* Centraliza verticalmente os elementos */
   margin-bottom: 100px; /* Adiciona uma margem inferior */
   margin-top: -10%; /* Define a margem superior como 190px */
-  margin-left: -140px;
-  width: 900px;
+  margin-left: -5%;
+  width: 30%;
+}
+
+.title-image-container6 h2 {
+  margin-top: -25px; /* Define a margem superior como -25px */
+  margin-left: -2%; /* Define a margem esquerda como 50px */
+  font-family: "Raleway", sans-serif; /* Define a família da fonte */
+  line-height: 1.2; /* Define a altura da linha */
+  color: #000000; /* Define a cor do texto como branca */
 }
 
 .title-image-container7 {
@@ -366,30 +409,41 @@ color: #bf1313;
   display: flex; /* Alinha os elementos lado a lado */
   align-items: center; /* Centraliza verticalmente os elementos */
   margin-bottom: 100px; /* Adiciona uma margem inferior */
-  margin-top: -150px; /* Define a margem superior como 190px */
-  margin-left: -140px;
+  margin-top: -47%; /* Define a margem superior como 190px */
+  margin-left: -25%;
   width: 600px;
 }
 
 
-.title-image-container6 h2 {
-  margin-top: -25px; /* Define a margem superior como -25px */
-  margin-left: -60px; /* Define a margem esquerda como 50px */
-  font-family: "Raleway", sans-serif; /* Define a família da fonte */
-  line-height: 1.2; /* Define a altura da linha */
-  color: #000000; /* Define a cor do texto como branca */
-}
-
 .title-image-container7 h2 {
   margin-top: -25px; /* Define a margem superior como -25px */
-  margin-left: -60px; /* Define a margem esquerda como 50px */
+  margin-left: -2%; /* Define a margem esquerda como 50px */
+  font-family: "Raleway", sans-serif; /* Define a família da fonte */
+  line-height: 1.2; /* Define a altura da linha */
+  color: #000000; /* Define a cor do texto como branca */
+}
+
+.title-image-container8 {
+  position: absolute;
+  display: flex; /* Alinha os elementos lado a lado */
+  align-items: center; /* Centraliza verticalmente os elementos */
+  margin-bottom: 100px; /* Adiciona uma margem inferior */
+  margin-top: -47%; /* Define a margem superior como 190px */
+  margin-left: -25%;
+  width: 600px;
+}
+
+
+.title-image-container8 h2 {
+  margin-top: -25px; /* Define a margem superior como -25px */
+  margin-left: -2%; /* Define a margem esquerda como 50px */
   font-family: "Raleway", sans-serif; /* Define a família da fonte */
   line-height: 1.2; /* Define a altura da linha */
   color: #000000; /* Define a cor do texto como branca */
 }
 
 
-/TERCEIRA SEÇÃO/
+/*TERCEIRA SEÇÃO*/
 
 /* Estilos para a tabela */
 .table {
@@ -485,7 +539,7 @@ margin: 20px; /* Ajuste a margem conforme desejado */
 overflow: hidden;
 }
 
-.card6 {
+.card8 {
   background-image: url('https://cultura.uol.com.br/upload/tvcultura/entretenimento/20231205195946_mis.jpg');
   background-size: 700px; /* Ajustar o tamanho da imagem */
   background-position: center; /* Posicionar a imagem no centro */
@@ -511,7 +565,7 @@ overflow: hidden;
 
 
 
-.card6-title {
+.card8-title {
 margin-left: 5px;
 margin-top: 15px;
 font-size: 15px; /* Tamanho do título */
@@ -519,7 +573,7 @@ margin-bottom: 10px; /* Espaçamento inferior do título */
 color: #2190a3;
 }
 
-.card6-text {
+.card8-text {
 margin-left: 5px;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 color: #000000;
@@ -591,7 +645,7 @@ font-size: 20px; /* Tamanho do texto */
 line-height: 1.4; /* Altura da linha do texto */
 }
 
-.card6-title {
+.card8-title {
   margin-left: 15px;
   margin-top: 35%;
   font-size: 24px; /* Tamanho do título */
@@ -599,7 +653,7 @@ line-height: 1.4; /* Altura da linha do texto */
   color: #ff5531;
   }
 
-.card6-text {
+.card8-text {
   margin-left: 15px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #ffffff;
@@ -640,16 +694,17 @@ width: 100%;
 
 
 .container-list{
-margin-top: 220%;
-width: 300px;
-margin-left: -110%;
+margin-top: 220vh;
+width: 40%;
+margin-left: -100%;
 }
 
 .button {
+  margin-top: 2%;
 padding: 10px 20px;
-margin-left: 60px;
-height: 40px;
-width: 220px;
+margin-left: 8%;
+height: 4%;
+width: 85%;
 border: none;
 border-radius: 5px;
 background-color: #ffffff; /* Cor de fundo do botão */
@@ -673,14 +728,14 @@ margin: 0; /* Remove as margens padrão */
 
 .container-list li {
 padding: 8px 0; /* Espaçamento interno superior e inferior */
-font-size: 25px;
+font-size: 20px;
 font-family: "Raleway", sans-serif; /* Define a família da fonte */
 border-bottom: 1px solid #ccc; /* Linha divisória entre os itens */
 transition: all 0.3s ease; /* Transição suave ao passar o mouse */
 color: rgb(25, 145, 166);
 }
 
-li h1{
+.container-list li h1{
 margin-top: 10px;
 font-size: 15px;
 font-family: "Raleway", sans-serif; /* Define a família da fonte */
@@ -695,32 +750,34 @@ cursor: pointer; /* Cursor alterado para indicar interação */
 }
 
 .container-list2 ul {
-margin-left: 50px;
+margin-left: 5%;
 list-style: none; /* Remove os marcadores padrão */
 padding: 0; /* Remove o espaçamento interno padrão */
 }
 
 .container-list2 li {
 padding: 26px 0; /* Espaçamento interno superior e inferior */
-font-size: 25px;
+font-size: 20px;
 font-family: "Raleway", sans-serif; /* Define a família da fonte */
 border-bottom: 1px solid #ccc; /* Linha divisória entre os itens */
 transition: all 0.3s ease; /* Transição suave ao passar o mouse */
 color: #000000;
 }
 
-ul li i {
-position: flex;
-left: 20px;
-top: 2px;
-}
-
 .container-list2{
 position: absolute;
-margin-top: -455px;
-width: 350px;
-margin-left: -20%;
+margin-top: -25.7%;
+width: 20%;
+margin-left: -15%;
 }
+
+.container-list2 li h1{
+  margin-top: 1%;
+  font-size: 15px;
+  font-family: "Raleway", sans-serif; /* Define a família da fonte */
+  line-height: 1.2; /* Define a altura da linha */
+  color: #9699a4;
+  }
 
 .container-list3 ul {
 list-style: none; /* Remove os marcadores padrão */
@@ -729,22 +786,24 @@ padding: 0; /* Remove o espaçamento interno padrão */
 
 .container-list3 li {
 padding: 26px 0; /* Espaçamento interno superior e inferior */
-font-size: 25px;
+font-size: 20px;
 font-family: "Raleway", sans-serif; /* Define a família da fonte */
 border-bottom: 1px solid #ccc; /* Linha divisória entre os itens */
 transition: all 0.3s ease; /* Transição suave ao passar o mouse */
 color: #000000;
 }
 
-ul li i {
-position: flex;
-left: 20px;
-top: 2px;
-}
+.container-list3 li h1{
+  margin-top: 1%;
+  font-size: 15px;
+  font-family: "Raleway", sans-serif; /* Define a família da fonte */
+  line-height: 1.2; /* Define a altura da linha */
+  color: #9699a4;
+  }
 
 .container-list3{
 position: absolute;
-margin-top: -455px;
-width: 350px;
+margin-top: -26.5%;
+width: 20%;
 margin-left: 15%;
 }

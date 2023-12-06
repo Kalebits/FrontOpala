@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IAnuncio } from 'app/model/IAnuncio.model';
+import { AnuncioService } from 'app/service/anuncio.service';
 
 @Component({
   selector: 'app-logada-artista',
@@ -6,26 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./logada-artista.component.css']
 })
 export class LogadaArtistaComponent implements OnInit{
-  contratantes: Array<any> = [];
-  artistas: Array<any> = [];
+  listaAnun: IAnuncio[] = [];
   
-  constructor() { }
   
+  constructor(private anuncioService: AnuncioService) { }
+  
+
 
   ngOnInit() {
-    this.contratantes = [
-      { "id": 1, "nome": "Barzin da Esquina", "procura": "Cantor", "descricao": "Procuramos cantor para cantar dia 12/12/24 das 23 as 00", "entrada": "23:00", "saida": "00:00", "pagamento": "A combinar" },
-      { "id": 2, "nome": "Barzin da Esquina", "procura": "Cantor", "descricao": "Procuramos cantor para cantar dia 12/12/24 das 23 as 00", "entrada": "23:00", "saida": "00:00", "pagamento": "A combinar" },
+    this.carregarAnuncios();
+  }
 
-      
-];
-      this.artistas = [
-      {"id": 1, "nome": "João", "tipo": "Cantor", "descricao": "Canto sertanejo com minha equipe e já fiz alguns covers"},
-      {"id": 1, "nome": "João", "tipo": "Cantor", "descricao": "Canto sertanejo com minha equipe e já fiz alguns covers"}
+  carregarAnuncios(): void{
+    this.anuncioService.buscarTodos().subscribe(retorno =>{
+      this.listaAnun = retorno;
+    })
+  }
 
-  
-];
-}
-
+  deletar(anuncio: IAnuncio): void{
+      this.anuncioService.excluir(anuncio.id!).subscribe(()=>{
+        this.anuncioService.exibirMensagem('Sistema', `Anuncio de ${anuncio.tipo} foi aceito com sucesso!`, 'toast-success');
+        this.carregarAnuncios
+      })
+  }
 
 }

@@ -27,26 +27,25 @@
           <h2 style="color: black; font-size: 25px;"><br>VAGAS<br> RECENTES</h2>
       </div>
       <div class="container-principal">
-          <div class="card2" *ngFor="let item of contratantes"> 
+          <div class="card2" *ngFor="let item of listaAnun"> 
               <table class="table">
                   <thead>
                       <tr>
-                          <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
-                          <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
-                          <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
-                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
+                          <th>Descrição do seviço:<h1>{{item.descricao}}</h1></th>
+                          <th>Entrada:<h1>{{item.data}}</h1></th>
+                          <th>Tipo:<h1>{{item.tipo}}</h1></th>
+                          <button class="button" (click)="deletar(item)">ALOOOOOOOOOOOOO</button>
                       </tr>
                   </thead>
               </table>
           </div>
-          <div class="card2" *ngFor="let item of contratantes"> 
+          <div class="card2" *ngFor="let item of listaAnun"> 
               <table class="table">
                   <thead>
                       <tr>
-                          <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
-                          <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
-                          <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
-                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
+                        <th>Descrição do serviço:<h1>{{item.descricao}}</h1></th>
+                        <th>Entrada:<h1>{{item.data}}</h1></th>
+                        <th>Tipo:<h1>{{item.tipo}}</h1></th>
                       </tr>
                   </thead>
               </table>
@@ -64,24 +63,24 @@
             <h2 style="color: black; font-size: 25px;"><br>ARTISTAS<br> DISPONÍVEIS</h2>
         </div>
         <div class="container-principal2">
-            <div class="card2" *ngFor="let item of artistas"> 
+            <div class="card2" *ngFor="let item of listaAnun"> 
                 <table class="table">
                     <thead>
                         <tr>
-                          <th>Nome:<h1>{{item.nome}}</h1></th>
+                          <th>Descrição do serviço:<h1>{{item.descricao}}</h1></th>
+                          <th>Entrada:<h1>{{item.data}}</h1></th>
                           <th>Tipo:<h1>{{item.tipo}}</h1></th>
-                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
                         </tr>
                     </thead>
                 </table>
             </div>
-            <div class="card2" *ngFor="let item of artistas"> 
+            <div class="card2" *ngFor="let item of listaAnun"> 
                 <table class="table">
                     <thead>
                         <tr>
-                          <th>Nome:<h1>{{item.nome}}</h1></th>
+                          <th>Descrição do serviço:<h1>{{item.descricao}}</h1></th>
+                          <th>Entrada:<h1>{{item.data}}</h1></th>
                           <th>Tipo:<h1>{{item.tipo}}</h1></th>
-                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
                         </tr>
                     </thead>
                 </table>
@@ -95,7 +94,7 @@
       <div class="col-md-12">
         <div class="container-principal4">
           <div class="title-image-container5">
-            <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
+            <img src="..\assets\fita.png" alt="Imagem" width="130px" height="120px">
             <h2><br>OUTROS<br> ARTISTAS</h2>
         </div>
             <div class="card6" style="max-width: 18rem;">
@@ -261,10 +260,10 @@
                 </a>
                 <a href="https://cultura.uol.com.br/entretenimento/noticias/2023/12/05/8723_feira-das-ideias-evento-no-mis-incentiva-economia-criativa-e-comercio-consciente.html">
                 <div class="carousel-item">
-                 <div class="card6">
+                 <div class="card8">
                   <div class="card-img-overlay">
-                    <h5 class="card6-title">Cultura</h5>
-                    <p class="card6-text">“Feira das Ideias”: evento no MIS incentiva economia criativa e comércio conscientes</p>
+                    <h5 class="card8-title">Cultura</h5>
+                    <p class="card8-text">“Feira das Ideias”: evento no MIS incentiva economia criativa e comércio conscientes</p>
                   </div>
                 </div>
                 </div>
@@ -289,26 +288,25 @@
           <h2 style="color: black; font-size: 30px;"><br>VAGAS<br> EM ANDAMENTO</h2>
       </div>
       <div class="container-principal3">
-          <div class="card2" *ngFor="let item of contratantes"> 
+          <div class="card2" *ngFor="let item of listaAnun where"> 
               <table class="table">
                   <thead>
                       <tr>
-                          <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
-                          <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
-                          <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
-                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
+                        <th>Descrição do serviço:<h1>{{item.descricao}}</h1></th>
+                        <th>Entrada:<h1>{{item.data}}</h1></th>
+                        <th>Tipo:<h1>{{item.tipo}}</h1></th>
                       </tr>
+                      
                   </thead>
               </table>
           </div>
-          <div class="card2" *ngFor="let item of contratantes"> 
+          <div class="card2" *ngFor="let item of listaAnun"> 
               <table class="table">
                   <thead>
                       <tr>
-                          <th>Nome:<h1>{{item.nome}}</h1>Tipo:<h1>{{item.procura}}</h1></th>
-                          <th>Entrada:<h1>{{item.entrada}}</h1>Saida:<h1>{{item.saida}}</h1></th>
-                          <th>Pagamento:<h1>{{item.pagamento}}</h1></th>
-                          <th>Descrição:<h1>{{item.descricao}}</h1></th>
+                        <th>Descrição do serviço:<h1>{{item.descricao}}</h1></th>
+                        <th>Entrada:<h1>{{item.data}}</h1></th>
+                        <th>Tipo:<h1>{{item.tipo}}</h1></th>
                       </tr>
                   </thead>
               </table>
@@ -318,8 +316,8 @@
       <div class="col-md-6">
         <div class="container-list">
           <div class="title-image-container6">
-            <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-            <h2 style="color: black; font-size: 30px;"><br>FÓRUM<br> M ARTE</h2>
+            <img src="..\assets\fita.png" alt="Imagem" width="150px" height="130px">
+            <h2 style="color: black; font-size: 25px;"><br>FÓRUM<br> M ARTE</h2>
         </div>
         <ul>
           <li>Violão Giannini para <br> iniciantes<h1>Caio Dias - Intermediario</h1></li>
@@ -331,8 +329,8 @@
     
     <div class="container-list2">
       <div class="title-image-container7">
-        <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-        <h2 style="color: black; font-size: 30px;"><br>MELHORES <br> AVALIAÇÕES - ARTISTAS</h2>
+        <img src="..\assets\fita.png" alt="Imagem" width="130px" height="120px">
+        <h2 style="color: black; font-size: 25px;"><br>MELHORES <br> AVALIAÇÕES - ARTISTAS</h2>
     </div>
     <ul>
       <li><i class="fas fa-user"></i>&nbsp;&nbsp;Jorge Cesar<h1>5 Estrelas - 105 contratações - Músico</h1></li>
@@ -342,15 +340,15 @@
     </ul>
     </div>
     <div class="container-list3">
-      <div class="title-image-container7">
-        <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-        <h2 style="color: black; font-size: 30px;"><br>MELHORES <br> AVALIAÇÕES - CONTRATANTES</h2>
+      <div class="title-image-container8">
+        <img src="..\assets\fita.png" alt="Imagem" width="130px" height="120px">
+        <h2 style="color: black; font-size: 25px;"><br>MELHORES <br> AVALIAÇÕES - CONTRATANTES</h2>
     </div>
     <ul>
       <li>&nbsp;&nbsp;Barzin da Esquina<h1>5 Estrelas - 304 contratações - São Paulo</h1></li>
       <li>&nbsp;&nbsp;Spettos Bar<h1>5 Estrelas - 208 contratações - Guarulhos</h1></li>
       <li>&nbsp;&nbsp;Biscuit Eventos<h1>4.5 Estrelas - 180 contratações - Rio de Janeiro</h1></li>
-      <button class="button">Ver mais artistas &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
+      <button class="button">Ver mais contratantes &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
     </ul>
     </div>
       </div>

@@ -39,14 +39,23 @@
                 </div>
 
                 <div class="form-group">
+                    <label>
+                        <input class="button-radio1" type="radio" name="tipo-genero" value="MASCULINO" checked="checked" [(ngModel)]="usuario.genero"> Masculino
+                      </label>
+                      <label>
+                        <input class="button-radio2" type="radio" name="tipo-genero" value="FEMININO"  [(ngModel)]="usuario.genero" required> Feminino
+                      </label>
+                </div>
+
+                <div class="form-group">
 
                     <ng-template [ngIf]="errorMessageT != null" [ngIfElse]="celular">
 
-                    <label class="text-danger">Celular</label>
+                    <label class="text-danger">Celular*</label>
 
                     </ng-template>
 
-                    <ng-template #celular><label>Celular</label></ng-template>
+                    <ng-template #celular><label>Celular*</label></ng-template>
 
                     <input type="text" class="form-control" formControlName="tel" [(ngModel)]="usuario.telefone" />
                     <span class="mensagem-erro">{{errorMessageT}}</span>
