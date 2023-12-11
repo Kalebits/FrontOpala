@@ -8,9 +8,7 @@
     </div>
     <div class="toolbar">
         <ul>
-          <li><a href="#painel2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vagas<br>em andamento</a></li>
-          <li><a href="#AREAC">&nbsp;&nbsp;&nbsp;Área <br> Cultural</a></li>
-          <button id="profile-icon" class="user-button"><i class="fas fa-user"></i></button>
+          <button id="profile-icon" class="user-button" routerLink="/perfilM"><i class="fas fa-user"></i></button>
         </ul>
       </div>
   </nav>
@@ -27,31 +25,20 @@
           <h2 style="color: black; font-size: 25px;"><br>VAGAS<br> RECENTES</h2>
       </div>
       <div class="container-principal">
-          <div class="card2" *ngFor="let item of listaAnun"> 
+          <div class="card2" *ngFor="let item of listaAnun.artistas">
               <table class="table">
                   <thead>
                       <tr>
-                          <th>Descrição do seviço:<h1>{{item.descricao}}</h1></th>
-                          <th>Entrada:<h1>{{item.data}}</h1></th>
-                          <th>Tipo:<h1>{{item.tipo}}</h1></th>
-                          <button class="button" (click)="deletar(item)">ALOOOOOOOOOOOOO</button>
-                      </tr>
-                  </thead>
-              </table>
-          </div>
-          <div class="card2" *ngFor="let item of listaAnun"> 
-              <table class="table">
-                  <thead>
-                      <tr>
-                        <th>Descrição do serviço:<h1>{{item.descricao}}</h1></th>
+                        <th>Descrição do seviço:<h1>{{item.descricao}}</h1></th>
                         <th>Entrada:<h1>{{item.data}}</h1></th>
                         <th>Tipo:<h1>{{item.tipo}}</h1></th>
                       </tr>
                   </thead>
               </table>
           </div>
+
       </div>
-  
+
       </div>
     </div>
 
@@ -63,130 +50,26 @@
             <h2 style="color: black; font-size: 25px;"><br>ARTISTAS<br> DISPONÍVEIS</h2>
         </div>
         <div class="container-principal2">
-            <div class="card2" *ngFor="let item of listaAnun"> 
+            <div class="card10" *ngFor="let item of listaAnun.contratantes">
                 <table class="table">
                     <thead>
                         <tr>
-                          <th>Descrição do serviço:<h1>{{item.descricao}}</h1></th>
+                          <th>Descrição do seviço:<h1>{{item.descricao}}</h1></th>
                           <th>Entrada:<h1>{{item.data}}</h1></th>
                           <th>Tipo:<h1>{{item.tipo}}</h1></th>
                         </tr>
                     </thead>
                 </table>
             </div>
-            <div class="card2" *ngFor="let item of listaAnun"> 
-                <table class="table">
-                    <thead>
-                        <tr>
-                          <th>Descrição do serviço:<h1>{{item.descricao}}</h1></th>
-                          <th>Entrada:<h1>{{item.data}}</h1></th>
-                          <th>Tipo:<h1>{{item.tipo}}</h1></th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+
         </div>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <div class="container-principal4">
-          <div class="title-image-container5">
-            <img src="..\assets\fita.png" alt="Imagem" width="130px" height="120px">
-            <h2><br>OUTROS<br> ARTISTAS</h2>
-        </div>
-            <div class="card6" style="max-width: 18rem;">
-              <div class="ratio ratio-16x9">
-                <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <div class="card6-body">
-                <h5 class="card6-title">Legião Urbana</h5>
-                <p class="card6-text">Pais e Filhos</p>
-                <p class="card6-text2">Há 4 dias</p>
-              </div>
-            </div>
-            <div class="card6" style="max-width: 18rem;">
-              <div class="ratio ratio-16x9">
-                <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <div class="card6-body">
-                <h5 class="card6-title">Legião Urbana</h5>
-                <p class="card6-text">Pais e Filhos</p>
-                <p class="card6-text2">Há 4 dias</p>
-              </div>
-            </div>
-            <div class="card6" style="max-width: 18rem;">
-              <div class="ratio ratio-16x9">
-                <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <div class="card6-body">
-                <h5 class="card6-title">Legião Urbana</h5>
-                <p class="card6-text">Pais e Filhos</p>
-                <p class="card6-text2">Há 4 dias</p>
-              </div>
-            </div>
-            <div class="card6" style="max-width: 18rem;">
-              <div class="ratio ratio-16x9">
-                <iframe width="1324" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <div class="card6-body">
-                <h5 class="card6-title">Legião Urbana</h5>
-                <p class="card6-text">Pais e Filhos</p>
-                <p class="card6-text2">Há 4 dias</p>
-              </div>
-            </div>
-      </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-6">
-        <div class="container-principal5">
-          <div class="card6" style="max-width: 18rem;">
-            <div class="ratio ratio-16x9">
-              <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="card6-body">
-              <h5 class="card6-title">Legião Urbana</h5>
-              <p class="card6-text">Pais e Filhos</p>
-              <p class="card6-text2">Há 4 dias</p>
-            </div>
-          </div>
-          <div class="card6" style="max-width: 18rem;">
-            <div class="ratio ratio-16x9">
-              <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="card6-body">
-              <h5 class="card6-title">Legião Urbana</h5>
-              <p class="card6-text">Pais e Filhos</p>
-              <p class="card6-text2">Há 4 dias</p>
-            </div>
-          </div>
-          <div class="card6" style="max-width: 18rem;">
-            <div class="ratio ratio-16x9">
-              <iframe width="1424" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="card6-body">
-              <h5 class="card6-title">Legião Urbana</h5>
-              <p class="card6-text">Pais e Filhos</p>
-              <p class="card6-text2">Há 4 dias</p>
-            </div>
-          </div>
-          <div class="card6" style="max-width: 18rem;">
-            <div class="ratio ratio-16x9">
-              <iframe width="1324" height="652" src="https://www.youtube.com/embed/DEwLqT669Do" style="border: 1px solid #000;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="card6-body">
-              <h5 class="card6-title">Legião Urbana</h5>
-              <p class="card6-text">Pais e Filhos</p>
-              <p class="card6-text2">Há 4 dias</p>
-            </div>
-          </div>
-      </div>
-      </div>
-    </div>
+
+
 
     <div class="row">
       <div class="col-md-6">
@@ -235,7 +118,7 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-  
+
             <div id="carouselExampleFade" class="carousel2 slide carousel-fade" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -283,34 +166,9 @@
 
     <div class="row">
       <div class="col-md-6">
-        <div class="title-image-container4">
-          <img src="..\assets\fita.png" alt="Imagem" width="200px" height="150px">
-          <h2 style="color: black; font-size: 30px;"><br>VAGAS<br> EM ANDAMENTO</h2>
-      </div>
       <div class="container-principal3">
-          <div class="card2" *ngFor="let item of listaAnun where"> 
-              <table class="table">
-                  <thead>
-                      <tr>
-                        <th>Descrição do serviço:<h1>{{item.descricao}}</h1></th>
-                        <th>Entrada:<h1>{{item.data}}</h1></th>
-                        <th>Tipo:<h1>{{item.tipo}}</h1></th>
-                      </tr>
-                      
-                  </thead>
-              </table>
-          </div>
-          <div class="card2" *ngFor="let item of listaAnun"> 
-              <table class="table">
-                  <thead>
-                      <tr>
-                        <th>Descrição do serviço:<h1>{{item.descricao}}</h1></th>
-                        <th>Entrada:<h1>{{item.data}}</h1></th>
-                        <th>Tipo:<h1>{{item.tipo}}</h1></th>
-                      </tr>
-                  </thead>
-              </table>
-          </div>
+
+
       </div>
       </div>
       <div class="col-md-6">
@@ -323,10 +181,9 @@
           <li>Violão Giannini para <br> iniciantes<h1>Caio Dias - Intermediario</h1></li>
           <li>Lentes Sigma <br> processos de fabricação<h1>Luana Martins - Avançado</h1></li>
           <li>Indicação para isolamento <br> acústico Stéreo<h1>Karla Andrade - Intermediario</h1></li>
-          <button class="button">Ver mais tópicos &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
       </ul>
     </div>
-    
+
     <div class="container-list2">
       <div class="title-image-container7">
         <img src="..\assets\fita.png" alt="Imagem" width="130px" height="120px">
@@ -336,7 +193,6 @@
       <li><i class="fas fa-user"></i>&nbsp;&nbsp;Jorge Cesar<h1>5 Estrelas - 105 contratações - Músico</h1></li>
       <li><i class="fas fa-user"></i>&nbsp;&nbsp;Leticia Fergari<h1>5 Estrelas - 97 contratações - Cantora</h1></li>
       <li><i class="fas fa-user"></i>&nbsp;&nbsp;Lucas Torres<h1>4.5 Estrelas - 97 contratações - Dançarino</h1></li>
-      <button class="button">Ver mais artistas &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
     </ul>
     </div>
     <div class="container-list3">
@@ -348,11 +204,16 @@
       <li>&nbsp;&nbsp;Barzin da Esquina<h1>5 Estrelas - 304 contratações - São Paulo</h1></li>
       <li>&nbsp;&nbsp;Spettos Bar<h1>5 Estrelas - 208 contratações - Guarulhos</h1></li>
       <li>&nbsp;&nbsp;Biscuit Eventos<h1>4.5 Estrelas - 180 contratações - Rio de Janeiro</h1></li>
-      <button class="button">Ver mais contratantes &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button>
     </ul>
     </div>
       </div>
     </div>
   </div>
   </div>
+  <footer>
+    <div class="container">
+      <hr>
+      <p>&copy; 2023 Marte.com | Todos os direitos reservados</p>
+    </div>
+  </footer>
 </body>

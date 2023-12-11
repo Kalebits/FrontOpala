@@ -3,4 +3,5 @@ export interface IAnuncio{
     descricao: string;
     data: Date;
     tipo: string;
+    exclusao?: string;
 }

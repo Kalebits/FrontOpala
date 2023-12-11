@@ -1,36 +1,37 @@
-
 .navbar {
   position: fixed; /* Define o posicionamento fixo */
   top: 0; /* Alinha ao topo */
   right: 0; /* Alinha à direita */
-  width: 100%; /* Largura de 100% */
+  width: 100vw; /* Largura de 100% */
   background-color: #000000; /* Cor de fundo preta */
   color: #ffffff; /* Cor do texto branca */
   display: flex; /* Usa o modelo de layout flexível */
   padding: 0 16px; /* Preenchimento de 0 nas laterais e 16px no topo e na base */
   align-items: center; /* Centraliza verticalmente os itens */
-  height: 100px; /* Altura de 100px */
+  height: 17%; /* Altura de 100px */
   font-family: "Raleway", sans-serif; /* Define a família da fonte */
   font-weight: 500; /* Define o peso da fonte */
-  font-size: 20px; /* Define o tamanho da fonte como 20px */
-  line-height: 32px; /* Define a altura da linha */
+  font-size: 150%; /* Define o tamanho da fonte como 20px */
+  line-height: 100%; /* Define a altura da linha */
   z-index: 9999; /* Define o índice Z */
 }
 
 .navbar img {
-  margin-left: 40px; /* Define a margem esquerda como 40px */
+  margin-left: 2%; /* Define a margem esquerda como 40px */
 }
 
 .comp {
-    margin-left: 980px; /* Define a margem esquerda como 980px */
+    margin-left: 20%; /* Define a margem esquerda como 980px */
     text-decoration: none; /* Remove a decoração do texto */
     color: #ffffff; /* Define a cor do texto como branca */
 }
 
 
+
 /*PÁGINA*/
 .container-principal {
-  margin-top: 100px; /* Define a margem superior como 100px */
+  margin-top: 7%; /* Define a margem superior como 100px */
+  width: 100%;
 }
 
 /*PRIMEIRA SEÇÃO*/
@@ -38,27 +39,26 @@
 .section1 .title-image-container {
   display: flex; /* Alinha os elementos lado a lado */
   align-items: center; /* Centraliza verticalmente os elementos */
-  margin-bottom: 20px; /* Adiciona uma margem inferior */
-  margin-top: 190px; /* Define a margem superior como 190px */
+  margin-bottom: 5%; /* Adiciona uma margem inferior */
+  margin-top: 13%; /* Define a margem superior como 190px */
 }
 
 .section1 .title-image-container img {
-  margin-top: -140px; /* Define a margem superior como -140px */
-  margin-left: -60px; /* Define a margem esquerda como -60px */
-  margin-right: -60px; /* Define a margem direita como -60px */
+  margin-top: -10%; /* Define a margem superior como -140px */
+  margin-left: -2%; /* Define a margem esquerda como -60px */
 }
 
 .section1 .title-image-container h2 {
-  margin-top: -210px; /* Define a margem superior como -210px */
-  margin-left: 50px; /* Define a margem esquerda como 50px */
+  margin-top: -15%; /* Define a margem superior como -210px */
+  margin-left: 2%; /* Define a margem esquerda como 50px */
   font-family: "Raleway", sans-serif; /* Define a família da fonte */
   font-size: 45px; /* Define o tamanho da fonte como 45px */
   line-height: 1.2; /* Define a altura da linha */
-  color: #ffffff; /* Define a cor do texto como branca */
+  color: #000000; /* Define a cor do texto como branca */
 }
 
 .section1 .title-image-container h3 {
-  margin-top: -70px; /* Define a margem superior como -70px */
+  margin-top: -5%; /* Define a margem superior como -70px */
   margin-left: -450px; /* Define a margem esquerda como -450px */
   font-family: "Raleway", sans-serif; /* Define a família da fonte */
   font-size: 25px; /* Define o tamanho da fonte como 25px */
@@ -67,8 +67,8 @@
 }
 
 .button {
-  margin-top: 180px; /* Define a margem superior como 180px */
-  margin-left: 75px; /* Define a margem esquerda como 75px */
+  margin-top: 15%; /* Define a margem superior como 180px */
+  margin-left: 5%; /* Define a margem esquerda como 75px */
   padding: 20px 100px; /* Define o preenchimento */
   background-color: #000000; /* Cor de fundo preta */
   color: #ffffff; /* Cor do texto branca */
@@ -84,10 +84,10 @@
 }
 
 .section1 {
-  background-color:#2190a3; /* Cor de fundo azul */
+  background-color:#d3f8ff; /* Cor de fundo azul */
   height: 100vh; /* Altura de 100% da altura da janela de visualização */
-  width: 1500px; /* Largura de 1500px */
-  margin-left: 0px; /* Define a margem esquerda como 0px */
+  width: 100%; /* Largura de 1500px */
+  margin-left: 0%; /* Define a margem esquerda como 0px */
   display: inline-block; /* Define como bloco em linha */
   align-items: center; /* Centraliza verticalmente os elementos */
   justify-content: center; /* Centraliza horizontalmente os elementos */
@@ -95,15 +95,15 @@
 
 
 .container-carousel2 {
-  margin-top: -400px; /* Define a margem superior como -400px */
-  max-width: 600px; /* Define a largura máxima como 600px */
-  margin-left: 800px; /* Define a margem esquerda como 800px */
+  margin-top: -27%; /* Define a margem superior como -400px */
+  width: 50%; /* Define a largura máxima como 600px */
+  margin-left: 55%; /* Define a margem esquerda como 800px */
   position: flex; /* Define a posição como flex */
   border-radius: 20px; /* Define o raio da borda */
 }
 
 #carouselExampleControls .carousel-item img {
-  width: 600px; /* Define a largura da imagem como 600px */
+  width: 100%; /* Define a largura da imagem como 600px */
   height: 380px; /* Define a altura da imagem como 380px */
 }
 
@@ -116,65 +116,49 @@
 
 /* Ajustes para exibir 3 cards por vez e aumentar o tamanho */
 .section2 {
-  background-color: #1b7f91; /* Cor de fundo azul escuro */
+  background-color: #d3f8ff; /* Cor de fundo azul escuro */
   text-align: center; /* Alinha o texto ao centro */
-  margin-top: -190px; /* Define a margem superior como -190px */
-  width: 1500px; /* Largura de 1500px */
-  height: 700px; /* Altura de 700px */
-  margin-left: 0px; /* Define a margem esquerda como 0px */
+  margin-top: -14%; /* Define a margem superior como -190px */
+  width: 100%; /* Largura de 1500px */
+  height: 100vh; /* Altura de 700px */
+  margin-left: 0%; /* Define a margem esquerda como 0px */
 }
 
 .title-image-container {
   display: flex; /* Alinha os elementos lado a lado */
   align-items: center; /* Centraliza verticalmente os elementos */
   margin-bottom: 20px; /* Adiciona uma margem inferior */
-  margin-top: 190px; /* Define a margem superior como 190px */
+  margin-top: 13%; /* Define a margem superior como 190px */
 }
 
 .title-image-container img {
-  margin-left: -60px; /* Define a margem esquerda como -60px */
-  margin-right: -60px; /* Define a margem direita como -60px */
+  margin-left: -2%; /* Define a margem esquerda como -60px */
+  margin-right: -2%; /* Define a margem direita como -60px */
 }
 
 .title-image-container h2 {
-  margin-top: -25px; /* Define a margem superior como -25px */
-  margin-left: 50px; /* Define a margem esquerda como 50px */
+  margin-top: -2%; /* Define a margem superior como -25px */
+  margin-left: 2%; /* Define a margem esquerda como 50px */
   font-family: "Raleway", sans-serif; /* Define a família da fonte */
   font-size: 15px; /* Define o tamanho da fonte como 15px */
   line-height: 1.2; /* Define a altura da linha */
-  color: #ffffff; /* Define a cor do texto como branca */
+  color: #000000; /* Define a cor do texto como branca */
 }
 
 .title-image-container h3 {
-  margin-top: 40px; /* Define a margem superior como 40px */
-  margin-left: -320px; /* Define a margem esquerda como -320px */
+  margin-top: 2%; /* Define a margem superior como 40px */
+  margin-left: -20%; /* Define a margem esquerda como -320px */
   font-family: "Raleway", sans-serif; /* Define a família da fonte */
   font-size: 15px; /* Define o tamanho da fonte como 15px */
   line-height: 1.2; /* Define a altura da linha */
   color: #000000; /* Define a cor do texto como preta */
 }
 
-.section2-titulo {
-  font-family: "Raleway", sans-serif; /* Define a família da fonte */
-  font-size: 24px; /* Define o tamanho da fonte como 24px */
-  margin-left: -1020px; /* Define a margem esquerda como -1020px */
-  color: #ffffff; /* Define a cor do texto como branca */
-  margin-bottom: -10px; /* Define a margem inferior como -10px */
-}
-
-.section2-titulo2 {
-  font-family: "Raleway", sans-serif; /* Define a família da fonte */
-  font-size: 14px; /* Define o tamanho da fonte como 14px */
-  margin-left: -1020px; /* Define a margem esquerda como -1020px */
-  color: #000000; /* Define a cor do texto como preta */
-  margin-top: 0; /* Define a margem superior como 0 */
-}
-
 .carousel {
-  top: 90px; /* Define a distância do topo como 90px */
+  top: 7%; /* Define a distância do topo como 90px */
   display: grid; /* Usa o modelo de layout grid */
   position: relative; /* Define a posição como relativa */
-  max-width: 1031px; /* Define a largura máxima como 1031px */
+  max-width: 68%; /* Define a largura máxima como 1031px */
   margin: 0 auto; /* Margem automática nas laterais */
   overflow: hidden; /* Esconde o conteúdo que estourar o container */
 }
@@ -185,24 +169,56 @@
 }
 
 .card {
-  flex: 0 0 auto; /* Define o tamanho do flex */
-  width: 500px; /* Define a largura como 500px */
-  height: 450px; /* Define a altura como 450px */
-  padding: 20px; /* Adiciona preenchimento */
-  margin-right: 10px; /* Define a margem direita como 10px */
-  margin-bottom: 20px; /* Define a margem inferior como 20px */
-  background: #f0f0f0; /* Cor de fundo cinza claro */
-  border-radius: 8px; /* Define o raio da borda */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  flex: 0 0 auto;
+  width: 100%;
+  height: 70vh;
+  padding: 20px;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Adiciona a imagem de fundo e ajusta o tamanho e a posição */
+  background-image: url('D:/OPALA/FrontOpala/src/assets/tela1.png');
+  background-size: cover;
+  background-position: center;
 }
 
+.card2 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 70vh;
+  padding: 20px;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Adiciona a imagem de fundo e ajusta o tamanho e a posição */
+  background-image: url('D:/OPALA/FrontOpala/src/assets/tela2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.card3 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 70vh;
+  padding: 20px;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Adiciona a imagem de fundo e ajusta o tamanho e a posição */
+  background-image: url('D:/OPALA/FrontOpala/src/assets/tela3.png');
+  background-size: cover;
+  background-position: center;
+}
 
 .prev-button,
 .next-button {
   position: absolute; /* Define a posição como absoluta */
   top: 50%; /* Alinha ao meio verticalmente */
   transform: translateY(-50%); /* Move para cima metade da altura */
-  padding: 10px 20px; /* Adiciona preenchimento */
+  padding: 1% 2%; /* Adiciona preenchimento */
   border: none; /* Remove a borda */
   border-radius: 4px; /* Define o raio da borda */
   background-color: #3498db; /* Cor de fundo azul claro */
@@ -220,99 +236,50 @@
 
 /*TERCEIRA SEÇÃO*/
 .section3 {
-  margin-top: 0px; /* Define a margem superior como 0px */
-  background-color:#1b7f91; /* Cor de fundo azul escuro */
+  position: relative;
+  margin-top: 0%; /* Define a margem superior como 0px */
+  background-color:#d3f8ff; /* Cor de fundo azul escuro */
   height: 100vh; /* Altura de 100% da altura da janela de visualização */
-  width: 1500px; /* Largura de 1500px */
-  margin-left: -101px; /* Define a margem esquerda como -101px */
+  width: 102%; /* Largura de 1500px */
+  margin-left: -2%; /* Define a margem esquerda como -101px */
   display: flex; /* Usa o modelo de layout flexível */
   align-items: center; /* Centraliza verticalmente os itens */
   justify-content: center; /* Centraliza horizontalmente os itens */
 }
 
-.section3::before {
-  content: ''; /* Adiciona um conteúdo antes do elemento */
-  position: absolute; /* Define a posição como absoluta */
-  top: 120px; /* Define a posição superior como 120px */
-  width: 1460px; /* Define a largura como 1460px */
-  left: 20px; /* Define a margem esquerda como 20px */
-  right: 0; /* Define a margem direita como 0 */
-  border-top: 10px solid transparent; /* Define uma borda superior transparente */
-  border-image:  linear-gradient(to right, #1b4148, #6ca9b4); /* Define um gradiente linear como imagem de borda */
-  border-image-slice: 1; /* Define a largura da borda como 1 */
-  border-radius: 5px; /* Define o raio da borda */
-}
-
-
-.section3::after {
-  content: ''; /* Adiciona conteúdo ao pseudo-elemento */
-  position: absolute; /* Define a posição como absoluta */
-  top: 120px; /* Posiciona o elemento 120px do topo */
-  height: 630px; /* Define a altura como 630px */
-  left: 20px; /* Posiciona a 20px da esquerda */
-  transform: translateX(-50%); /* Move para o centro horizontal */
-  width: 10px; /* Define a largura como 10px */
-  background: linear-gradient(to bottom, #1b4148, #6ca9b4); /* Define um gradiente vertical de vermelho para verde */
-  border-radius: 5px; /* Define o raio da borda */
-}
-
-.border-top {
-  content: ''; /* Adiciona conteúdo ao pseudo-elemento */
-  position: absolute; /* Define a posição como absoluta */
-  top: 120px; /* Posiciona o elemento 120px do topo */
-  height: 629px; /* Define a altura como 629px */
-  left: 1475px; /* Posiciona a 1475px da esquerda */
-  transform: translateX(-50%); /* Move para o centro horizontal */
-  width: 10px; /* Define a largura como 10px */
-  background: linear-gradient(to bottom, #6ca9b4, #2b6f7b); /* Define um gradiente vertical de azul para verde */
-  border-radius: 5px; /* Define o raio da borda */
-}
-
-.border-top2 {
-  content: ''; /* Adiciona conteúdo ao pseudo-elemento */
-  position: absolute; /* Define a posição como absoluta */
-  top: 740px; /* Posiciona o elemento 740px do topo */
-  width: 1460px; /* Define a largura como 1460px */
-  left: 20px; /* Posiciona a 20px da esquerda */
-  right: 0; /* Define a margem direita como 0 */
-  border-top: 10px solid transparent; /* Define uma borda superior transparente */
-  border-image:  linear-gradient(to right, #6ca9b4, #1b4148); /* Define um gradiente horizontal */
-  border-image-slice: 1; /* Define a largura da borda como 1 */
-  border-radius: 5px; /* Define o raio da borda */
-}
 
 .section-title {
-  margin-top: 200px; /* Define a margem superior como 200px */
-  margin-left: 610px; /* Define a margem esquerda como 610px */
+  margin-top: 13%; /* Define a margem superior como 200px */
+  margin-left: 40%; /* Define a margem esquerda como 610px */
   position: absolute; /* Define a posição como absoluta */
   font-family: "Dancing Script", sans-serif; /* Define a família da fonte */
   font-size: 80px; /* Define o tamanho da fonte como 80px */
   line-height: 1.2; /* Define a altura da linha */
-  color: #ffffff; /* Define a cor do texto como branca */
+  color: #000000; /* Define a cor do texto como branca */
   margin-bottom: 20px; /* Espaçamento inferior de 20px */
 }
 
 .section-title2 {
-  margin-top: 300px; /* Define a margem superior como 300px */
-  margin-left: 550px; /* Define a margem esquerda como 550px */
+  margin-top: 19%; /* Define a margem superior como 300px */
+  margin-left: 37%; /* Define a margem esquerda como 550px */
   position: absolute; /* Define a posição como absoluta */
   font-family: "Raleway", sans-serif; /* Define a família da fonte */
   font-size: 16px; /* Define o tamanho da fonte como 16px */
   line-height: 1.2; /* Define a altura da linha */
-  color: #ffffff; /* Define a cor do texto como branca */
+  color: #000000; /* Define a cor do texto como branca */
   margin-bottom: 20px; /* Espaçamento inferior de 20px */
 }
 
 .image-container {
   position: relative; /* Define a posição como relativa */
   width: 100%; /* Define a largura como 100% */
-  height: 500px; /* Define a altura como 500px */
+  height: 92%; /* Define a altura como 500px */
 }
 
 .image-container img {
   position: absolute; /* Define a posição como absoluta */
-  width: 100px; /* Define a largura como 100px */
-  height: 100px; /* Define a altura como 100px */
+  width: -5%; /* Define a largura como 100px */
+  height: 15%; /* Define a altura como 100px */
   object-fit: cover; /* Ajusta o tamanho da imagem para cobrir o container */
   border-radius: 10px; /* Define o raio da borda */
 }
@@ -360,6 +327,21 @@
 /* Adicione mais estilos para mais imagens conforme necessário */
 
 
+/* Estilos para o footer */
+footer {
+  background-color: #000000;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: -1%;
+}
 
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: rgb(255, 255, 255)
+}
 
-
+footer hr {
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}

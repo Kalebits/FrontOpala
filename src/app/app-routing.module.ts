@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', component:PaginaInicialComponent },
   { path: 'cadastro', component:PaginaCadastroComponent },
   { path: 'login', component:PaginaLoginComponent },
-  { path: 'perfil/:id', component:TelaArtistaComponent },
+  { path: 'perfil', component:TelaArtistaComponent },
   { path: 'logada', component:LogadaArtistaComponent },
   { path: 'perfilM', component:TelaPerfilComponent }
 ];

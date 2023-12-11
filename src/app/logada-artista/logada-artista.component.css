@@ -71,7 +71,7 @@ color: #000000; /* Cor do texto */
 }
 
 .user-button:hover, .profile-icon:hover{
-color: #bf1313; 
+color: #bf1313;
 }
 
 /* Estilos para a barra de pesquisa */
@@ -134,9 +134,9 @@ color: #bf1313;
 .container-principal::after {
   content: ''; /* Adiciona conteúdo ao pseudo-elemento */
   position: absolute; /* Define a posição como absoluta */
-  top: 450px; /* Posiciona o elemento 120px do topo */
-  height: 430px; /* Define a altura como 630px */
-  left: 765px; /* Posiciona a 20px da esquerda */
+  top: 65%; /* Posiciona o elemento 120px do topo */
+  height: 43%; /* Define a altura como 630px */
+  left: 54%; /* Posiciona a 20px da esquerda */
   transform: translateX(-50%); /* Move para o centro horizontal */
   width: 2px; /* Define a largura como 10px */
   background: black;
@@ -145,7 +145,7 @@ color: #bf1313;
 
 .card2 {
   position: flex;
-  margin-top: 20px;
+  margin-top: 15%;
   width: 300px; /* Define a largura como 500px */
   height: 410px; /* Define a altura como 450px */
   padding: 20px; /* Adiciona preenchimento */
@@ -154,7 +154,33 @@ color: #bf1313;
   background: #2190a3; /* Cor de fundo cinza claro */
   border-radius: 8px; /* Define o raio da borda */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.595); /* Adiciona sombra */
-} 
+}
+
+.card10 {
+  position: flex;
+  margin-top: 51%;
+  width: 300px; /* Define a largura como 500px */
+  height: 410px; /* Define a altura como 450px */
+  padding: 20px; /* Adiciona preenchimento */
+  left: -20px;
+  margin-bottom: 20px; /* Define a margem inferior como 20px */
+  background: #2190a3; /* Cor de fundo cinza claro */
+  border-radius: 8px; /* Define o raio da borda */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.595); /* Adiciona sombra */
+}
+
+.card11 {
+  position: flex;
+  margin-top: 51%;
+  width: 300px; /* Define a largura como 500px */
+  height: 410px; /* Define a altura como 450px */
+  padding: 20px; /* Adiciona preenchimento */
+  left: -20%;
+  margin-bottom: 20px; /* Define a margem inferior como 20px */
+  background: #2190a3; /* Cor de fundo cinza claro */
+  border-radius: 8px; /* Define o raio da borda */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.595); /* Adiciona sombra */
+}
 
 /* */
 
@@ -237,10 +263,10 @@ color: #bf1313;
  .section1 {
   position: absolute;
   background-color:#2190a3; /* Cor de fundo azul */
-  height: 135vh; /* Altura de 100% da altura da janela de visualização */
+  height: 155vh; /* Altura de 100% da altura da janela de visualização */
   width: 545px; /* Largura de 1500px */
   margin-left: 57.1%; /* Define a margem esquerda como 0px */
-  margin-top: 215px;
+  margin-top: 115px;
   display: inline-block; /* Define como bloco em linha */
   align-items: center; /* Centraliza verticalmente os elementos */
   justify-content: center; /* Centraliza horizontalmente os elementos */
@@ -660,7 +686,7 @@ line-height: 1.4; /* Altura da linha do texto */
   font-size: 20px; /* Tamanho do texto */
   line-height: 1.4; /* Altura da linha do texto */
   }
-  
+
   .card7-title {
     margin-left: 15px;
     margin-top: 35%;
@@ -668,7 +694,7 @@ line-height: 1.4; /* Altura da linha do texto */
     margin-bottom: 10px; /* Espaçamento inferior do título */
     color: #e11d21;
     }
-  
+
   .card7-text {
     margin-left: 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -696,7 +722,7 @@ width: 100%;
 .container-list{
 margin-top: 220vh;
 width: 40%;
-margin-left: -100%;
+margin-left: 50%;
 }
 
 .button {
@@ -730,7 +756,7 @@ margin: 0; /* Remove as margens padrão */
 padding: 8px 0; /* Espaçamento interno superior e inferior */
 font-size: 20px;
 font-family: "Raleway", sans-serif; /* Define a família da fonte */
-border-bottom: 1px solid #ccc; /* Linha divisória entre os itens */
+border-bottom: 1px solid #ffffff; /* Linha divisória entre os itens */
 transition: all 0.3s ease; /* Transição suave ao passar o mouse */
 color: rgb(25, 145, 166);
 }
@@ -744,13 +770,13 @@ color: #9699a4;
 }
 
 /* Estilo ao passar o mouse */
-.container-list, .container-list2, .container-list3 li:hover {
+.container-list li:hover, .container-list2 li:hover, .container-list3 li:hover {
 background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
 cursor: pointer; /* Cursor alterado para indicar interação */
 }
 
 .container-list2 ul {
-margin-left: 5%;
+margin-left: 13%;
 list-style: none; /* Remove os marcadores padrão */
 padding: 0; /* Remove o espaçamento interno padrão */
 }
@@ -766,9 +792,9 @@ color: #000000;
 
 .container-list2{
 position: absolute;
-margin-top: -25.7%;
+margin-top: -32%;
 width: 20%;
-margin-left: -15%;
+margin-left: -18%;
 }
 
 .container-list2 li h1{
@@ -803,7 +829,25 @@ color: #000000;
 
 .container-list3{
 position: absolute;
-margin-top: -26.5%;
+margin-top: -32%;
 width: 20%;
 margin-left: 15%;
+}
+
+footer {
+  background-color: #000000;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 3%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: rgb(255, 255, 255)
+}
+
+footer hr {
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IAnuncio } from 'app/model/IAnuncio.model';
+import { anuncioResponde } from 'app/model/anuncioResponde.model';
 import { AnuncioService } from 'app/service/anuncio.service';
 
 @Component({
@@ -8,11 +9,11 @@ import { AnuncioService } from 'app/service/anuncio.service';
   styleUrls: ['./logada-artista.component.css']
 })
 export class LogadaArtistaComponent implements OnInit{
-  listaAnun: IAnuncio[] = [];
-  
-  
+  listaAnun: any;
+
+
   constructor(private anuncioService: AnuncioService) { }
-  
+
 
 
   ngOnInit() {
@@ -21,6 +22,12 @@ export class LogadaArtistaComponent implements OnInit{
 
   carregarAnuncios(): void{
     this.anuncioService.buscarTodos().subscribe(retorno =>{
+      this.listaAnun = retorno;
+    })
+  }
+
+  patch(anuncio: IAnuncio) : void{
+    this.anuncioService.exlcusaoL(anuncio.id!).subscribe(retorno=>{
       this.listaAnun = retorno;
     })
   }

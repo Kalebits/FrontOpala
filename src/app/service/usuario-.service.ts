@@ -21,12 +21,17 @@ export class UsuarioService {
        catchError(erro => this.exibirErro(erro)))
   }
 
+  buscarUsuario(id: number): Observable<any>{
+    return this.http.get<any>(`${this.API}/${id}`).pipe(map(retorno => retorno),
+    catchError(erro=> this.exibirErro(erro)))
+  }
+
   exibirMensagem(titulo: string, mensagem: string, tipo: string): void{
     this.toastr.show(mensagem,titulo,{closeButton:true, progressBar:true}, tipo);
   }
 
   exibirErro(e: any): Observable<any>{
-    this.exibirMensagem('Erro!!!', 'Não foi possivel realizar a operação', 'toast-error');
+    this.exibirMensagem('Erro!!!', 'Não foi possivel realizar a operação', 'toast-success');
     return EMPTY;
   }
 
@@ -36,14 +41,14 @@ export class UsuarioService {
   }
 
   logarUsuario(usuario: ILogin): Observable<ILogin>{
-    
+
     return this.http.post<any>(`${this.API}/login`, usuario).pipe(
       tap(retorno => {
         retorno;
         return true;
       }),
       catchError(erro => this.exibirErroLogin(erro)))
-    
+
   }
 
 

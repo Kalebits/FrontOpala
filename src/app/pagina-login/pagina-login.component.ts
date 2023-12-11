@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from "@angular/forms";
 import { Validacoes } from '../validacoes';
@@ -20,6 +20,7 @@ import { UsuarioService } from 'app/service/usuario-.service';
 export class PaginaLoginComponent {
   loginForm: FormGroup;
   errorMessage: string | null = null;
+  @Output() sendData: EventEmitter<any> = new EventEmitter<any>();
 
   loginx: ILogin = {
     senha: '',
@@ -37,10 +38,10 @@ export class PaginaLoginComponent {
 
     if (isCPF(loginValue)) {
       this.loginx.cpf = loginValue;
-      
+
       this.usuarioService.logarUsuario(this.loginx).subscribe(retorno => {
         if (retorno) {
-          window.location.href = '/logada';
+          window.location.href = '/perfilM';
         }
       }
       );
@@ -50,7 +51,8 @@ export class PaginaLoginComponent {
 
       this.usuarioService.logarUsuario(this.loginx).subscribe(retorno => {
         if (retorno) {
-          window.location.href = '/logada';
+          this.sendData.emit(retorno);
+          window.location.href = '/perfilM';
         }
       });
     }

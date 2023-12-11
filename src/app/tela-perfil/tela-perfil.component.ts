@@ -6,6 +6,8 @@ import listPlugin from '@fullcalendar/list';
 import interactionPlugin from '@fullcalendar/interaction';
 import { MidiaService } from '../service/midia.service';
 import { AvaliacaoService } from 'app/service/avaliacao.service';
+import { IUsuario } from 'app/model/IUsuario.model';
+import { UsuarioService } from 'app/service/usuario-.service';
 
 @Component({
   selector: 'app-tela-perfil',
@@ -22,11 +24,20 @@ export class TelaPerfilComponent implements AfterViewInit {
   chatModal!: HTMLElement;
   midia: Array<any> = [];
   avaliacao: Array<any> = [];
-  
-  constructor(private serviceM:MidiaService, private serviceA:AvaliacaoService) { }
+
+  usuario: IUsuario ={
+    nome: '',
+    cpf: '',
+    email: '',
+    senha: '',
+    telefone: '',
+    genero: ''
+  };
+
+  constructor(private serviceM:MidiaService, private serviceA:AvaliacaoService, private usuarioS: UsuarioService) { }
 
   ngAfterViewInit() {
-
+    this.buscar();
     this.serviceM.listar().subscribe(m => this.midia = m);
     this.serviceA.listar().subscribe(a => this.avaliacao = a);
     const today = new Date(); // Obtém a data atual
@@ -39,7 +50,7 @@ export class TelaPerfilComponent implements AfterViewInit {
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
       initialDate: today,
-      locale: 'pt-br', 
+      locale: 'pt-br',
       buttonText: {
         today: 'Hoje',
         dayGridMonth: 'Mês',
@@ -47,7 +58,7 @@ export class TelaPerfilComponent implements AfterViewInit {
         timeGridDay: 'Dia',
         listWeek: 'Lista Evento'
       },
-  
+
       navLinks: true,
       editable: true,
       dayMaxEvents: true,
@@ -68,12 +79,16 @@ export class TelaPerfilComponent implements AfterViewInit {
         text-decoration: none;
       }
     `;
-    
+
 
     this.calendarEl.nativeElement.appendChild(styleElement);
   }
 
-  
+  buscar(): void{
+      this.usuarioS.buscarUsuario(3).subscribe(retorno =>{
+        this.usuario = retorno;
+      })
+  }
 
   handleDateClick(arg: any) {
     this.selectedDate = arg.dateStr;
@@ -89,6 +104,8 @@ export class TelaPerfilComponent implements AfterViewInit {
     this.chatModal.style.display = 'block';
   }
 
+
+
   closeChatModal() {
     this.chatModal.style.display = 'none';
   }
@@ -99,12 +116,12 @@ export class TelaPerfilComponent implements AfterViewInit {
       start: this.selectedDate,
       allDay: true
     };
-  
+
     this.events.push(newEvent);
     this.closeModal();
     this.updateCalendarEvents(); // Atualiza os eventos no calendário após a adição
   }
-  
+
   updateCalendarEvents() {
     const calendarApi = this.calendarEl.nativeElement.fullCalendar;
     calendarApi.removeAllEvents();
